@@ -1,0 +1,32 @@
+[debug] [2018-02-03T14:09:56.130Z] ----------------------------------------------------------------------
+[debug] [2018-02-03T14:09:56.132Z] Command:       /home/pl4gue/Program_Files/node-v8.9.1-linux-x64/bin/node /home/pl4gue/Program_Files/node-v8.9.1-linux-x64/bin/firebase serve
+[debug] [2018-02-03T14:09:56.132Z] CLI Version:   3.17.4
+[debug] [2018-02-03T14:09:56.132Z] Platform:      linux
+[debug] [2018-02-03T14:09:56.132Z] Node Version:  v8.9.1
+[debug] [2018-02-03T14:09:56.132Z] Time:          Sat Feb 03 2018 15:09:56 GMT+0100 (CET)
+[debug] [2018-02-03T14:09:56.132Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-03T14:09:56.143Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-03T14:09:56.143Z] > authorizing via signed-in user
+[debug] [2018-02-03T14:09:56.146Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/coderdojo-web  
+  
+ Sat Feb 03 2018 15:09:56 GMT+0100 (CET)
+[debug] [2018-02-03T14:09:56.991Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-03T14:09:56.992Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/coderdojo-web/tokens  
+  
+ Sat Feb 03 2018 15:09:56 GMT+0100 (CET)
+[debug] [2018-02-03T14:09:57.636Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/pl4gue/Programming/coderdojo'...
+[info] 
+[debug] [2018-02-03T14:09:57.640Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/coderdojo-web  
+  
+ Sat Feb 03 2018 15:09:57 GMT+0100 (CET)
+[debug] [2018-02-03T14:09:58.442Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-03T14:09:58.442Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/904662503804/clients/_:getWebAppConfig  
+  
+ Sat Feb 03 2018 15:09:58 GMT+0100 (CET)
+[debug] [2018-02-03T14:09:58.901Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: /
+[info] ✔  hosting: Local server: http://localhost:5000
+
