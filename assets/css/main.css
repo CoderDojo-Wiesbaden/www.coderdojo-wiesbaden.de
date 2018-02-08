@@ -9,29 +9,6 @@
 
 /* Reset */
 
-	.collapsable {
-	    background-color: #777;
-	    color: white;
-	    cursor: pointer;
-	    padding: 18px;
-	    width: 100%;
-	    border: none;
-	    text-align: left;
-	    outline: none;
-	    font-size: 15px;
-	}
-
-	.active, .collapsible:hover {
-	    background-color: #555;
-	}
-
-	.collapsableContent {
-	    padding: 0 18px;
-	    display: none;
-	    overflow: hidden;
-	    background-color: #f1f1f1;
-	}
-
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -2822,7 +2799,7 @@
 					color: inherit !important;
 				}
 
-			.tiles article .linkNoAnimation {
+			.tiles article .linkNoAnim.primary {
 				border: 0;
 				height: 100%;
 				left: 0;

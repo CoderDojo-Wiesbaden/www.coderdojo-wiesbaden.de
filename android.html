@@ -114,47 +114,8 @@
 						<div class="6u 12u$(small)">
 							<h3>
 								<br/>Ressourcen</h3>
-							<button class="collapsable">Farben</button>
-							<div class="collapsableContent">
-								<p>private String[] mFarben = {
-									<br/>"#39add1",
-									<br/>"#3079ab",
-									<br/>"#c25975",
-									<br/>"#e15258",
-									<br/>"#f9845b",
-									<br/>"#838cc7",
-									<br/>"#7d669e",
-									<br/>"#53bbb4",
-									<br/>"#51b46d",
-									<br/> "#e0ab18",
-									<br/>"#637a91",
-									<br/>"#f092b0",
-									<br/>"#b7c0c7"
-									<br/>};</p>
-							</div>
-							<button class="collapsable">Aktionen</button>
-							<div class="collapsableContent">
-									<p>private String[] mAktionenFeld = {
-										<br/>"Schlafen",
-										<br/>"Android lernen",
-										<br/>"Einen Arduino zerstören",
-										<br/>"Den 3D-Drucker bewundern",
-										<br/>"Minecraft spielen",
-										<br/>"Aus dem Fenster schauen",
-										<br/>"Java programmieren",
-										<br/>"Scratchen",
-										<br/>"Hilflos gucken",
-										<br/>"C++ programmieren",
-										<br/>"Assembler programmieren",
-										<br/>"Tischtennis spielen",
-										<br/>"Meinen Computer reparieren",
-										<br/>"Fachgespräche führen",
-										<br/>"In der Nase bohren",
-										<br/>"Meinen Plan zur Weltherrschaft umsetzen"
-										<br/>};</p>
-							</div>
-
-
+							<a class="button fit" href="https://ghostbin.com/paste/uqwbr" target="_blank">Farben</a>
+							<a class="button fit" href="https://ghostbin.com/paste/v3m4b" target="_blank">Aktionen</a>
 						</div>
 						<div class="6u$ 12u$(small)">
 							<h3>
@@ -196,11 +157,11 @@
 							</a>
 						</div>
 						<div class="4u 12u$(small)">
-							<a href="mailto:coderdojo-team@coderdojo-wiesbaden.org">
+							<a href="mailto:coderdojo-team@bonifatius-wiesbaden.de">
 								<div class="contact-method">
 									<span class="icon alt fa-envelope"></span>
 									<h3>E-Mail</h3>
-									<span>coderdojo-team@coderdojo-wiesbaden.org</span>
+									<span>coderdojo-team@bonifatius-wiesbaden.de</span>
 								</div>
 							</a>
 						</div>
@@ -237,21 +198,21 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
 		<script>
-				var coll = document.getElementsByClassName("collapsable");
-				var i;
-				
-				for (i = 0; i < coll.length; i++) {
-					coll[i].addEventListener("click", function() {
-						this.classList.toggle("active");
-						var collapsableContent = this.nextElementSibling;
-						if (collapsableContent.style.display === "block") {
-							collapsableContent.style.display = "none";
-						} else {
-							collapsableContent.style.display = "block";
-						}
-					});
-				}
-				</script>
+			var coll = document.getElementsByClassName("collapsable");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var collapsableContent = this.nextElementSibling;
+					if (collapsableContent.style.display === "block") {
+						collapsableContent.style.display = "none";
+					} else {
+						collapsableContent.style.display = "block";
+					}
+				});
+			}
+		</script>
 
 </body>
 
