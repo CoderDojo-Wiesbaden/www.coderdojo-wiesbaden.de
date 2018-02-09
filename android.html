@@ -161,7 +161,7 @@
 								<div class="contact-method">
 									<span class="icon alt fa-envelope"></span>
 									<h3>E-Mail</h3>
-									<span>coderdojo-team@bonifatius-wiesbaden.de</span>
+									<span id="mailadress">coderdojo-team@bonifatius-wiesbaden.de</span>
 								</div>
 							</a>
 						</div>
@@ -183,7 +183,7 @@
 				<div class="inner">
 
 					<ul class="copyright">
-						<li>&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</li>
+						<center><li>&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</li></center>
 					</ul>
 				</div>
 			</footer>
@@ -197,23 +197,6 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-		<script>
-			var coll = document.getElementsByClassName("collapsable");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function () {
-					this.classList.toggle("active");
-					var collapsableContent = this.nextElementSibling;
-					if (collapsableContent.style.display === "block") {
-						collapsableContent.style.display = "none";
-					} else {
-						collapsableContent.style.display = "block";
-					}
-				});
-			}
-		</script>
-
 </body>
 
 </html>
