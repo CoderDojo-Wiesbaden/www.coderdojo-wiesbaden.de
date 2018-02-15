@@ -1,6 +1,10 @@
 language: node_js
-
-deploy:
-  provider: firebase
-  token:
-    secure: "YOUR ENCRYPTED token"
+cache:
+  directories:
+    - node_modules
+node_js:
+- node
+before_install:
+- npm install -g firebase-tools
+after_success:
+- firebase deploy --token "$FB_TOKEN"
