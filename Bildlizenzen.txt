@@ -3,3 +3,10 @@ Bitte hier einfügen:
 Bildurl auf unserer Seite -> Autor oder Quelle -> Lizenz
 
 Schafe auf Startseite -> Photo by Judith Prins on Unsplash -> cc0
+
+images/benjamin-willkommen.jpg | Startseite > 'Über uns' -> Benjamin Dahlhoff
+images/koenidv-android.jpeg | Startseite > 'Android-Workshop' -> Florian König
+images/koenidv-anfahrt.jpg | Startseite > 'Anfahrt' -> Florian König
+images/koenidv-anmeldung.jpeg | Startseite > 'Termine und Anmeldung' -> Florian König
+images/koenidv-esp.jpeg | Startseite > 'ESP8266-Workshop' -> Florian König
+images/koenidv-kontakt.jpg | Startseite > 'Kontakt' -> Florian König
