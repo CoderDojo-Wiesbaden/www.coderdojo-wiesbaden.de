@@ -70,6 +70,8 @@
 				position: absolute;
 				width: 100%;
 				z-index: 2;
+					// Fix transition flickering in webkit browsers
+				@include vendor('transform', 'translate3d(0,0,0)');
 			}
 
 			&:after {
