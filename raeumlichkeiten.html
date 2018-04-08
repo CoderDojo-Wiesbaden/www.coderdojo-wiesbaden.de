@@ -20,11 +20,11 @@
         <!-- Header -->
         <header id="header" class="alt">
             <a href="index.html" class="logo">
-                <strong>CoderDojo Wiesbaden</strong>
-                <span>St. Bonifatius Wiesbaden</span>
+                <strong id="headcoderdojo">CoderDojo Wiesbaden</strong>
+                <span id="headboni">St. Bonifatius Wiesbaden</span>
             </a>
             <nav>
-                <a href="#menu">Menu</a>
+                <a href="#menu" class="dark" id="menuicon">Menu</a>
             </nav>
         </header>
 
@@ -32,18 +32,18 @@
         <nav id="menu">
             <ul class="links">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="dark">Start</a>
                 </li>
                 <li>
-                    <a href="willkommen.html">Über Uns</a>
+                    <a href="willkommen.html" class="dark">Über Uns</a>
                 </li>
                 <li>
-                    <a href="anmeldung.html">Termine &amp; Anmeldung</a>
+                    <a href="anmeldung.html" class="dark">Termine &amp; Anmeldung</a>
                 </li>
             </ul>
             <ul class="actions vertical">
                 <li>
-                    <a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit">Jetzt Anmelden!</a>
+                    <a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit dark">Jetzt Anmelden!</a>
                 </li>
             </ul>
         </nav>
@@ -52,8 +52,8 @@
         <section id="content" class="major">
             <div class="inner">
                 <header class="major">
-                    <h1>Räume</h1>
-                    <h2>Bilde dir einen Plan.</h2>
+                    <h1 class="dark">Räume</h1>
+                    <h2 class="dark">Bilde dir einen Plan.</h2>
                 </header>
             </div>
         </section>
@@ -65,7 +65,7 @@
             <section id="one" class="tiles">
                 <article>
                     <span class="image">
-                        <img src="images/koenidv-404.jpeg" alt="" />
+                        <img src="images/koenidv-raum-technik.jpg" alt="" />
                     </span>
                     <header class="major">
                         <h3>
@@ -91,7 +91,7 @@
                 </article>
                 <article>
                     <span class="image">
-                        <img src="images/koenidv-404.jpeg" alt="" />
+                        <img src="images/koenidv-raum-maximiliankolbe.jpg" alt="" />
                     </span>
                     <header class="major">
                         <h3>
@@ -140,7 +140,8 @@
                         <h3>
                             Der Flur
                         </h3>
-                        <p>Dieser luxuriöse Flur bietet unserem Arduino-Tischkicker eine einzigartige Unterkunft. Ganz nebenbei verbindet er die Küche mit den zu mit Essen versorgenden Räumen.
+                        <p>Dieser luxuriöse Flur bietet unserem Arduino-Tischkicker eine einzigartige Unterkunft. Ganz nebenbei
+                            verbindet er die Küche mit den zu mit Essen versorgenden Räumen.
                             <br/> Kapazität: 1 Tischkicker
                         </p>
                     </header>
@@ -149,15 +150,15 @@
         </div>
 
         <!-- Contact -->
-        <section id="two">
+        <section id="four">
             <div class="inner" id="contact">
                 <div class="row">
                     <div class="4u 12u$(small)">
                         <a href="anfahrt.html">
                             <div class="contact-method">
                                 <span class="icon alt fa-home"></span>
-                                <h3>Adresse</h3>
-                                <span>Pfarrei St. Bonifatius Wiesbaden
+                                <h3 class="dark">Adresse</h3>
+                                <span class="dark">Pfarrei St. Bonifatius Wiesbaden
                                     <br /> Luisenstraße 31
                                     <br /> 65185 Wiesbaden</span>
                             </div>
@@ -167,20 +168,20 @@
                         <a href="mailto:coderdojo-team@bonifatius-wiesbaden.de" target="_blank">
                             <div class="contact-method">
                                 <span class="icon alt fa-envelope"></span>
-                                <h3>E-Mail</h3>
-                                <span id="mailaddress">coderdojo-team@bonifatius-wiesbaden.de</span>
+                                <h3 class="dark">E-Mail</h3>
+                                <span id="mailaddress" class="dark">coderdojo-team@bonifatius-wiesbaden.de</span>
                             </div>
                         </a>
                     </div>
                     <div class="4u 12u$(small)">
-						<a href="tel:+496111575394">
-						<div class="contact-method">
-							<span class="icon alt fa-phone"></span>
-							<h3>Telefon</h3>
-							<span>0611 1575394</span>
-						</div>
-						</a>
-					</div>
+                        <a href="tel:+496111575394">
+                            <div class="contact-method">
+                                <span class="icon alt fa-phone"></span>
+                                <h3 class="dark">Telefon</h3>
+                                <span id="phonenumber" class="dark">0611 1575394</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -191,8 +192,11 @@
                 <ul class="copyright">
                     <center>
                         <li>
-                            <a href="https://www.bonifatius-wiesbaden.de" style="border-bottom: none">&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</a> •
-                            <a href="https://www.bonifatius-wiesbaden.de/impressum/" style="border-bottom: none">Impressum</a>
+                            <a href="https://www.bonifatius-wiesbaden.de" style="border-bottom: none" class="subdark">&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</a>
+                            <span class="subdark"> • </span>
+                            <a href="https://www.bonifatius-wiesbaden.de/impressum/" style="border-bottom: none" class="subdark">Impressum</a>
+                            <span class="subdark"> • </span>
+                            <a id="designToggler" onclick="toggleDesign()" style="border-bottom: none" class="subdark">Helles Design</a>
                         </li>
                     </center>
                 </ul>

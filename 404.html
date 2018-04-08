@@ -10,7 +10,7 @@
   <html>
 
   <head>
-    <title>Willkommen | CoderDojo Wiesbaden</title>
+    <title>Fehler | CoderDojo Wiesbaden</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -43,7 +43,7 @@
       <nav id="menu">
         <ul class="links">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.html">Start</a>
           </li>
           <li>
             <a href="willkommen.html">Über Uns</a>
@@ -66,7 +66,8 @@
         <section id="one">
           <div class="inner">
             <header class="major">
-              <h2><span style="font-size: 2.5em">404. </span>Das ist ein Fehler.</h2>
+              <h2>
+                <span style="font-size: 2.5em">404. </span>Das ist ein Fehler.</h2>
             </header>
 
             <!-- Content -->
@@ -75,7 +76,8 @@
               <div class="6u 12u$(medium)">
                 <h2>Damian hat den Werkzeugkasten verlegt.</h2>
                 <p>Wir benötigen das Werkzeug aber, um dir die Seite, die du gerne sähest, zu liefern.
-                  <br/>Unser bester Techniker, Damian, <strike>wird dazu gezwungen</strike> ist aktuell absolut freiwillig damit beschäftigt, den Werkzeugkasten wiederzufinden."
+                  <br/>Unser bester Techniker, Damian,
+                  <strike>wird dazu gezwungen</strike> ist aktuell absolut freiwillig damit beschäftigt, den Werkzeugkasten wiederzufinden."
                 </p>
               </div>
               <div class="6u$ 12u$(medium)">
@@ -99,7 +101,7 @@
       </div>
 
       <!-- Contact -->
-      <section id="one">
+      <section id="four">
         <div class="inner" id="contact">
           <div class="row">
             <div class="4u 12u$(small)">
@@ -108,27 +110,27 @@
                   <span class="icon alt fa-home"></span>
                   <h3>Adresse</h3>
                   <span>Pfarrei St. Bonifatius Wiesbaden
-                    <br /> Luisenstr. 31
+                    <br /> Luisenstraße 31
                     <br /> 65185 Wiesbaden</span>
                 </div>
               </a>
             </div>
             <div class="4u 12u$(small)">
-              <a href="mailto:coderdojo-team@bonifatius-wiesbaden.de">
+              <a href="mailto:coderdojo-team@bonifatius-wiesbaden.de" target="_blank">
                 <div class="contact-method">
                   <span class="icon alt fa-envelope"></span>
                   <h3>E-Mail</h3>
-                  <span id="mailadress">coderdojo-team@bonifatius-wiesbaden.de</span>
+                  <span id="mailaddress">coderdojo-team@bonifatius-wiesbaden.de</span>
                 </div>
               </a>
             </div>
             <div class="4u 12u$(small)">
               <a href="tel:+496111575394">
-              <div class="contact-method">
-                <span class="icon alt fa-phone"></span>
-                <h3>Telefon</h3>
-                <span>0611 1575394</span>
-              </div>
+                <div class="contact-method">
+                  <span class="icon alt fa-phone"></span>
+                  <h3 >Telefon</h3>
+                  <span id="phonenumber">0611 1575394</span>
+                </div>
               </a>
             </div>
           </div>
@@ -141,13 +143,17 @@
           <ul class="copyright">
             <center>
               <li>
-                <a href="https://www.bonifatius-wiesbaden.de" style="border-bottom: none">&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</a> •
-                <a href="https://www.bonifatius-wiesbaden.de/impressum/" style="border-bottom: none">Impressum</a>
+                <a href="https://www.bonifatius-wiesbaden.de" style="border-bottom: none" class="subdark">&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</a>
+                <span class="subdark"> • </span>
+                <a href="https://www.bonifatius-wiesbaden.de/impressum/" style="border-bottom: none" class="subdark">Impressum</a>
+                <span class="subdark"> • </span>
+                <a id="designToggler" onclick="toggleDesign()" style="border-bottom: none" class="subdark">Helles Design</a>
               </li>
             </center>
           </ul>
         </div>
       </footer>
+
     </div>
 
     <!-- Scripts -->
@@ -161,4 +167,4 @@
 
   </body>
 
-</html>
+  </html>

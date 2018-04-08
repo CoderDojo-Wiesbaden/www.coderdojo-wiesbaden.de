@@ -20,11 +20,11 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<a href="index.html" class="logo">
-				<strong>CoderDojo Wiesbaden</strong>
-				<span>St. Bonifatius Wiesbaden</span>
+				<strong id="headcoderdojo">CoderDojo Wiesbaden</strong>
+				<span id="headboni">St. Bonifatius Wiesbaden</span>
 			</a>
 			<nav>
-				<a href="#menu">Menu</a>
+				<a href="#menu" class="dark" id="menuicon">Menu</a>
 			</nav>
 		</header>
 
@@ -32,18 +32,18 @@
 		<nav id="menu">
 			<ul class="links">
 				<li>
-					<a href="index.html">Home</a>
+					<a href="index.html" class="dark">Start</a>
 				</li>
 				<li>
-					<a href="willkommen.html">Über Uns</a>
+					<a href="willkommen.html" class="dark">Über Uns</a>
 				</li>
 				<li>
-					<a href="anmeldung.html">Termine &amp; Anmeldung</a>
+					<a href="anmeldung.html" class="dark">Termine &amp; Anmeldung</a>
 				</li>
 			</ul>
 			<ul class="actions vertical">
 				<li>
-					<a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit">Jetzt Anmelden!</a>
+					<a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit dark">Jetzt Anmelden!</a>
 				</li>
 			</ul>
 		</nav>
@@ -143,12 +143,12 @@
 			<section id="two">
 				<div class="inner">
 					<header class="major">
-						<h2>Was soll hier stehen?</h2>
+						<h2 class="dark">Was soll hier stehen?</h2>
 					</header>
-					<p>Nun, das wissen wir selbst nicht. Aber vielleicht ja du? Komm ins CoderDojo und verbessere unsere Webseite!</p>
+					<p class="dark">Nun, das wissen wir selbst nicht. Aber vielleicht ja du? Komm ins CoderDojo und verbessere unsere Webseite!</p>
 					<ul class="actions">
 						<li>
-							<a href="anmeldung.html#anmeldung" class="button next">Los gehts!</a>
+							<a href="anmeldung.html#anmeldung" class="button next dark">Los gehts!</a>
 						</li>
 					</ul>
 				</div>
@@ -157,15 +157,15 @@
 		</div>
 
 		<!-- Contact -->
-		<section id="one">
+		<section id="four">
 			<div class="inner" id="contact">
 				<div class="row">
 					<div class="4u 12u$(small)">
 						<a href="anfahrt.html">
 							<div class="contact-method">
 								<span class="icon alt fa-home"></span>
-								<h3>Adresse</h3>
-								<span>Pfarrei St. Bonifatius Wiesbaden
+								<h3 class="dark">Adresse</h3>
+								<span class="dark">Pfarrei St. Bonifatius Wiesbaden
 									<br /> Luisenstraße 31
 									<br /> 65185 Wiesbaden</span>
 							</div>
@@ -175,18 +175,18 @@
 						<a href="mailto:coderdojo-team@bonifatius-wiesbaden.de" target="_blank">
 							<div class="contact-method">
 								<span class="icon alt fa-envelope"></span>
-								<h3>E-Mail</h3>
-								<span id="mailaddress">coderdojo-team@bonifatius-wiesbaden.de</span>
+								<h3 class="dark">E-Mail</h3>
+								<span id="mailaddress" class="dark">coderdojo-team@bonifatius-wiesbaden.de</span>
 							</div>
 						</a>
 					</div>
 					<div class="4u 12u$(small)">
 						<a href="tel:+496111575394">
-						<div class="contact-method">
-							<span class="icon alt fa-phone"></span>
-							<h3>Telefon</h3>
-							<span>0611 1575394</span>
-						</div>
+							<div class="contact-method">
+								<span class="icon alt fa-phone"></span>
+								<h3 class="dark">Telefon</h3>
+								<span id="phonenumber" class="dark">0611 1575394</span>
+							</div>
 						</a>
 					</div>
 				</div>
@@ -199,8 +199,11 @@
 				<ul class="copyright">
 					<center>
 						<li>
-							<a href="https://www.bonifatius-wiesbaden.de" style="border-bottom: none">&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</a> •
-							<a href="https://www.bonifatius-wiesbaden.de/impressum/" style="border-bottom: none">Impressum</a>
+							<a href="https://www.bonifatius-wiesbaden.de" style="border-bottom: none" class="subdark">&copy; Katholische Kirchengemeinde St. Bonifatius Wiesbaden</a>
+							<span class="subdark"> • </span>
+							<a href="https://www.bonifatius-wiesbaden.de/impressum/" style="border-bottom: none" class="subdark">Impressum</a>
+							<span class="subdark"> • </span>
+							<a id="designToggler" onclick="toggleDesign()" style="border-bottom: none" class="subdark">Helles Design</a>
 						</li>
 					</center>
 				</ul>
@@ -217,6 +220,11 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+
+	</script>
+
 
 </body>
 
