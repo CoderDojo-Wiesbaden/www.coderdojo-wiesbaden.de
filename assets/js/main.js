@@ -13,6 +13,7 @@ window.onload = function () {
 function updateDesign() {
 	if (localStorage.getItem("design") == "light") {
 		document.body.style.backgroundColor = "white";
+		document.body.style.backgroundImage = "none";
 
 		texts = document.getElementsByClassName("dark");
 		for (var i = 0; i < texts.length; i++) {
@@ -91,6 +92,12 @@ $(document).ready(function () {
 		} // End if
 	});
 });
+
+
+// Highlight contact for better visibility
+function highlightContact() {
+
+}
 
 
 
