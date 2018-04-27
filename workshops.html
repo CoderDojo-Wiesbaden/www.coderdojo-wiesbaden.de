@@ -13,40 +13,115 @@
 </head>
 
 <body style="background-image: url(images/gross/koenidv-workshops.jpg)" class="imgbg imgoverlay">
+	<script src="assets/js/design.js"></script>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<a href="index.html" class="logo">
-					<strong id="headcoderdojo">CoderDojo Wiesbaden</strong>
-					<span id="headboni">St. Bonifatius Wiesbaden</span>
-				</a>
-				<nav>
-					<a href="#menu" class="dark" id="menuicon">Menu</a>
-				</nav>
-			</header>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <a href="index.html" class="logo">
+                <strong id="headcoderdojo">CoderDojo Wiesbaden</strong>
+                <span id="headboni">St. Bonifatius Wiesbaden</span>
+            </a>
+            <nav>
+                <a href="#menu" class="dark" id="menuicon">Javascript ist deaktiviert</a>
+            </nav>
+        </header>
 
-			<!-- Menu -->
-			<nav id="menu">
-				<ul class="links">
-					<li>
-						<a href="index.html" class="dark">Start</a>
-					</li>
-					<li>
-						<a href="willkommen.html" class="dark">Über Uns</a>
-					</li>
-					<li>
-						<a href="anmeldung.html" class="dark">Termine &amp; Anmeldung</a>
-					</li>
-				</ul>
-				<ul class="actions vertical">
-					<li>
-						<a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit dark">Jetzt Anmelden!</a>
-					</li>
-				</ul>
-			</nav>
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links" id="menu-list">
+                <li id="nav-home">
+                    <a id="nav-home-link" href="index.html" class="special fit dark">Start</a>
+                </li>
+                <li id="nav-about">
+                    <a id="nav-about-link" href="willkommen.html" class="special fit dark">Über Uns</a>
+                </li>
+                <li id="nav-signup">
+                    <a id="nav-signup-link" href="anmeldung.html" class="special fit dark">Termine &amp; Anmeldung</a>
+                </li>
+                <li id="nav-approach" class="hidden">
+                    <a id="nav-approach-link" href="anfahrt.html" class="special fit dark">Anfahrt</a>
+                </li>
+                <li id="nav-rooms" class="hidden">
+                    <a id="nav-rooms-link" href="raeumlichkeiten.html" class="special fit dark">R&auml;ume</a>
+                </li>
+                <li id="nav-resources" class="hidden">
+                    <a id="nav-resources-link" href="ressourcen.html" class="special fit dark">Ressourcen</a>
+                </li>
+                <li id="nav-workshops" class="hidden">
+                    <a id="nav-workshops-link" href="workshops.html" class="special fit dark">Workshops</a>
+                </li>
+                <li id="nav-signupdirect">
+                    <a id="nav-signupdirect-link" href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit dark">Jetzt Anmelden!</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Contact form -->
+        <nav id="nachricht">
+            <form action="send_form.php" method="POST">
+                <h2 class="dark">Kontakt aufnehmen (Noch nicht aktiviert)</h2>
+                <div class="row">
+                    <div class="6u 12u$(small)">
+                        <input class="dark" type="text" name="name" placeholder="Name (Optional)" autocomplete="name">
+                        <br/>
+                    </div>
+                    <div class="6u$ 12u$(small)">
+                        <input class="dark" type="email" name="email" placeholder="E-Mail (Optional)" autocomplete="email">
+                        <br/>
+                    </div>
+                </div>
+                <textarea class="dark" type="text" name="message" placeholder="Deine Nachricht" spellcheck="true" required="required" pattern="[A-Za-z0-9]{1,20}"
+                    rows="3"></textarea>
+                <br/>
+
+                <input type="hidden" name="_subject" value="CDWi: Neue Nachricht [Ressourcen]">
+                <input type="hidden" name="_cc" value="koenidv@gmail.com">
+                <input type="hidden" name="_language" value="de">
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <input type="submit" value="Senden" class="button fit dark">
+            </form>
+        </nav>
+
+        <!-- Edit menu -->
+        <nav id="editmenu">
+            <!-- Privacy -->
+            <h2>Deine Daten</h2>
+            <button id="editcookies" onclick="toggleCookies()" class="button special fit">Cookies: An</button>
+            <p>Cookies erlauben uns, deine Einstellungen - zum Beispiel für das personalisierte Menü - zu speichern. Du kannst
+                sie deaktivieren, dann kannst du aber Funktionen, die diese benötigen, nicht mehr nutzen.
+                <a style="font-size: 0.8em" href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Was sind Cookies?</a>
+            </p>
+            <!-- Menu editing-->
+            <div style="height: 2em;"></div>
+            <h2>Menü</h2>
+            <ul id="editmenu-list" class="alt">
+                <!-- Menu editing content is added via JavaScript -->
+            </ul>
+        </nav>
+
+        <!-- Cookie warning -->
+        <div style="position: fixed; height: 100vh; z-index: 100;">
+            <div id="cookiewarning" class="hidden">
+                    <a class="closeicon" onclick="hideCookieWarning()">Schließen</a>
+                <div class="row">
+                    <div class="11u 12u$(small)">
+                        <h2>Heyho! Wir verwenden
+                            <a href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Cookies</a>, um deine
+                            <a onclick="showeditmenu()">Einstellungen</a> zu speichern.
+                            <a style="font-size: 0.6em; border-bottom: dotted 1px" onclick="disableCookies()">Ausschalten.</a>
+                        </h2>
+                    </div>
+                    <div class="1u 12u">
+                        <button class="button special" onclick="seenCookieWarning()">Okay</button>
+                    </div>
+                </div>
+            </div>
+		</div>
+		
 
 			<!-- Main -->
 			<div id="main">
@@ -168,14 +243,16 @@
 	</footer>
 
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/autosize.min.js"></script>
+    <script src="assets/js/Sortable.min.js"></script>
 
 </body>
 

@@ -1,58 +1,9 @@
-lightDesign = false;
-emailaddress = "coderdojo-team@bonifatius-wiesbaden.de"; //This will be shown on every page
-phonenumber = "0611 1575394"; //This will be shown on every page
 
-window.onload = function () {
-	document.getElementById("mailaddress").innerHTML = emailaddress;
-	document.getElementById("phonenumber").innerHTML = phonenumber;
-	document.getElementById("designToggler").innerHTML += " (Beta)";
-	updateDesign();
+function deleteCookie(cname) {
+	var d = new Date();
+	d.setTime(d.getTime() + 10000);
+	document.cookie = cname + "=" + "" + ";expires=" + d.toUTCString + ";path=/";
 }
-
-//Update Design
-function updateDesign() {
-	if (localStorage.getItem("design") == "light") {
-		document.body.style.backgroundColor = "white";
-		document.body.style.backgroundImage = "none";
-
-		texts = document.getElementsByClassName("dark");
-		for (var i = 0; i < texts.length; i++) {
-			texts[i].style.color = "#404040";
-		}
-
-		buttons = document.getElementsByClassName("button dark");
-		for (var i = 0; i < buttons.length; i++) {
-			buttons[i].style.boxShadow = "0 0 0 2px #aaaaaa";
-		}
-
-		specialbuttons = document.getElementsByClassName("special button dark");
-		for (var i = 0; i < specialbuttons.length; i++) {
-			specialbuttons[i].style.backgroundColor = "#404040";
-			specialbuttons[i].style.boxShadow = "0 0 0 2px #404040";
-			specialbuttons[i].style.color = "white";
-		}
-
-		subtexts = document.getElementsByClassName("subdark");
-		for (var i = 0; i < subtexts.length; i++) {
-			subtexts[i].style.color = "#aaaaaa";
-		}
-		//separators = document.getElementsByClassName("separator");
-		//for (var i = 0; i < subtexts.length; i++) {
-		//	separators[i].src = "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN0+A8AAYUBQcxKiF0AAAAASUVORK5CYII=')";
-		//}
-
-		document.getElementById("headcoderdojo").style.color = "white";
-		document.getElementById("headcoderdojo").style.backgroundColor = "#404040";
-		document.getElementById("headboni").style.color = "#aaaaaa";
-		document.getElementById("menu").style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-		//document.getElementById("menuicon").style.backgroundImage = "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI + PGc + PGc + Cgk8Zz4KCQk8cGF0aCBkPSJNNDkxLjMxOCwyMzUuMzE4SDIwLjY4MkM5LjI2LDIzNS4zMTgsMCwyNDQuNTc3LDAsMjU2czkuMjYsMjAuNjgyLDIwLjY4MiwyMC42ODJoNDcwLjYzNiAgICBjMTEuNDIzLDAsMjAuNjgyLTkuMjU5LDIwLjY4Mi0yMC42ODJDNTEyLDI0NC41NzgsNTAyLjc0MSwyMzUuMzE4LDQ5MS4zMTgsMjM1LjMxOHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzQwNDA0MCIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTwvZz4KPC9nPjxnPgoJPGc + CgkJPHBhdGggZD0iTTQ5MS4zMTgsNzguNDM5SDIwLjY4MkM5LjI2LDc4LjQzOSwwLDg3LjY5OSwwLDk5LjEyMWMwLDExLjQyMiw5LjI2LDIwLjY4MiwyMC42ODIsMjAuNjgyaDQ3MC42MzYgICAgYzExLjQyMywwLDIwLjY4Mi05LjI2LDIwLjY4Mi0yMC42ODJDNTEyLDg3LjY5OSw1MDIuNzQxLDc4LjQzOSw0OTEuMzE4LDc4LjQzOXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzQwNDA0MCIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTwvZz4KPC9nPjxnPgoJPGc + CgkJPHBhdGggZD0iTTQ5MS4zMTgsMzkyLjE5N0gyMC42ODJDOS4yNiwzOTIuMTk3LDAsNDAxLjQ1NiwwLDQxMi44NzlzOS4yNiwyMC42ODIsMjAuNjgyLDIwLjY4Mmg0NzAuNjM2ICAgIGMxMS40MjMsMCwyMC42ODItOS4yNTksMjAuNjgyLTIwLjY4MlM1MDIuNzQxLDM5Mi4xOTcsNDkxLjMxOCwzOTIuMTk3eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojNDA0MDQwIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI + PC9wYXRoPgoJPC9nPgo8L2c + PC9nPiA8L3N2Zz4=')";
-		//document.getElementById("banner").style.backgroundImage = "url('../../banner-light.jpg')";
-		//document.getElementById(banner).style.backgroundColor = "white"; //Needs to be banner:after background-color
-
-		document.getElementById("designToggler").innerHTML = "Dunkles Design";
-	}
-}
-
 
 //Toggle design
 function toggleDesign() {
@@ -65,6 +16,105 @@ function toggleDesign() {
 		localStorage.removeItem("design");
 		localStorage.setItem("design", "dark");
 		location.reload();
+	}
+}
+
+// Highlight contact for better visibility
+function highlightContact() {
+	//Coming soon
+}
+
+function seenCookieWarning() {
+	setCookie("seenCookieWarning", "yes", 356);
+	document.getElementById("cookiewarning").classList.add("hidden");
+}
+function hideCookieWarning() {
+	// User clicked "X" on the cookie warning. Hiding the warning for this session.
+	console.log("Hiding the cookie warning for this session.")
+	document.getElementById('cookiewarning').classList.add('hidden')
+	document.cookie = "seenCookieWarning" + "=" + "yes" + ";path=/";
+}
+function disableCookies() {
+	setCookie("cookiesDisabled", "disabled", 356);
+	console.log("Disabled future cookies.")
+	deleteCookie("menuorder");
+	for (var nav of defaultnavs) {
+		deleteCookie("nav-" + nav);
+	}
+	console.log("Deleted cookies.");
+	document.getElementById("cookiewarning").classList.add("hidden");
+	setCookie("seenCookieWarning", "yes", 356);
+	editcookies.classList.remove("special");
+	editcookies.innerHTML = "Cookies: Aus";
+	document.getElementById("editmenu-list").innerHTML = "Das personalisierte Menü ist nicht verfügbar, wenn die Cookies deaktiviert sind.";
+}
+
+function toggleCookies() {
+	var editcookies = document.getElementById("editcookies");
+
+	if (getCookie("cookiesDisabled") == "disabled") {
+		// Enable Cookies
+		deleteCookie("cookiesDisabled");
+		editcookies.classList.add("special");
+		editcookies.innerHTML = "Cookies: An";
+
+		if (document.getElementById("editmenu-list").innerHTML.startsWith("Das")) {
+			document.getElementById("editmenu-list").innerHTML = "<a onclick='location.reload()'>Bitte lade die Seite neu, um das personalisierte Menü zu aktivieren.</a>";
+		}
+
+	} else {
+		// Disable Cookies
+		disableCookies();
+		editcookies.classList.remove("special");
+		editcookies.innerHTML = "Cookies: Aus";
+		document.getElementById("editmenu-list").innerHTML = "Das personalisierte Menü ist nicht verfügbar, wenn die Cookies deaktiviert sind.";
+	}
+}
+
+function resetmenu() {
+	var additionalToRemove = [
+		"cookiesDisabled",
+		"menuorder",
+		"seenCookieWarning"
+	]
+
+	for (var x of additionalToRemove) {
+		deleteCookie(x);
+	}
+
+	for (var nav of defaultnavs) {
+		deleteCookie("nav-" + nav);
+	}
+
+	location.reload();
+}
+
+function editmenu(element) {
+	if (document.getElementById(element).classList.contains("hidden")) {
+		document.getElementById(element).classList.remove("hidden");
+		document.getElementById("edit-" + element).classList.add("special");
+		document.getElementById("edit-star-" + element).classList.remove("hidden");
+		setCookie(element, "enabled", 365);
+	} else {
+		document.getElementById(element).classList.add("hidden");
+		document.getElementById("edit-" + element).classList.remove("special");
+		document.getElementById("edit-star-" + element).classList.add("hidden");
+		if (getCookie(element) == "special") {
+			setCookie(element, "disabledspecial", 365);
+		} else {
+			setCookie(element, "disabled", 365);
+		}
+	}
+}
+function starmenu(element) {
+	if (document.getElementById(element + "-link").classList.contains("button")) {
+		document.getElementById(element + "-link").classList.remove("button");
+		document.getElementById("edit-star-" + element).classList.remove("special");
+		setCookie(element, "enabled", 365);
+	} else {
+		document.getElementById(element + "-link").classList.add("button");
+		document.getElementById("edit-star-" + element).classList.add("special");
+		setCookie(element, "special", 365);
 	}
 }
 
@@ -92,14 +142,6 @@ $(document).ready(function () {
 		} // End if
 	});
 });
-
-
-// Highlight contact for better visibility
-function highlightContact() {
-
-}
-
-
 
 
 (function ($) {
@@ -452,7 +494,167 @@ function highlightContact() {
 				$body.removeClass('is-menu-visible');
 
 			})
-			.append('<a class="close" href="#menu">Close</a>');
+			.append('<a class="close" href="#menu">Schließen</a>')
+			.append('<a class="edit" onclick="showeditmenu();">Bearbeiten</a>');
+
+		// Contact form
+		var $nachricht = $('#nachricht'),
+			$nachrichtInner;
+
+		$nachricht.wrapInner('<div class="inner"></div>');
+		$nachrichtInner = $nachricht.children('.inner');
+		$nachricht._locked = false;
+
+		$nachricht._lock = function () {
+
+			if ($nachricht._locked)
+				return false;
+
+			$nachricht._locked = true;
+
+			window.setTimeout(function () {
+				$nachricht._locked = false;
+			}, 350);
+
+			return true;
+
+		};
+
+		$nachricht._show = function () {
+
+			if ($nachricht._lock())
+				$body.addClass('is-nachricht-visible');
+
+		};
+
+		$nachricht._hide = function () {
+
+			if ($nachricht._lock())
+				$body.removeClass('is-nachricht-visible');
+
+		};
+
+		$nachricht._toggle = function () {
+
+			if ($nachricht._lock())
+				$body.toggleClass('is-nachricht-visible');
+
+		};
+
+		$nachrichtInner
+			.on('click', function (event) {
+				event.stopPropagation();
+			})
+			.on('click', 'a', function (event) {
+
+				var href = $(this).attr('href');
+
+				event.preventDefault();
+				event.stopPropagation();
+
+				// Hide.
+				$nachricht._hide();
+
+				// Redirect.
+				window.setTimeout(function () {
+					window.location.href = href;
+				}, 250);
+
+			});
+
+		$nachricht
+			.appendTo($body)
+			.on('click', function (event) {
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$body.removeClass('is-nachricht-visible');
+
+			})
+			.append('<a class="close" href="#nachricht">Schließen</a>');
+
+		// Edit menu
+		var $editmenu = $('#editmenu'),
+			$editmenuInner;
+
+		$editmenu.wrapInner('<div class="inner"></div>');
+		$editmenuInner = $editmenu.children('.inner');
+		$editmenu._locked = false;
+
+		$editmenu._lock = function () {
+
+			if ($editmenu._locked)
+				return false;
+
+			$editmenu._locked = true;
+
+			window.setTimeout(function () {
+				$editmenu._locked = false;
+			}, 350);
+
+			return true;
+
+		};
+
+		$editmenu._show = function () {
+
+			if ($editmenu._lock())
+				$body.addClass('is-editmenu-visible');
+
+		};
+
+		$editmenu._hide = function () {
+
+			if ($editmenu._lock())
+				$body.removeClass('is-editmenu-visible');
+
+		};
+
+		$editmenu._toggle = function () {
+
+			if ($editmenu._lock())
+				$body.toggleClass('is-editmenu-visible');
+
+		};
+
+		$editmenuInner
+			.on('click', function (event) {
+				event.stopPropagation();
+			})
+			.on('click', 'a', function (event) {
+
+				var href = $(this).attr('href');
+
+				event.preventDefault();
+				event.stopPropagation();
+
+				// Hide.
+				$editmenu._hide();
+
+				// Redirect.
+				window.setTimeout(function () {
+					window.location.href = href;
+				}, 250);
+
+			});
+
+		$editmenu
+			.appendTo($body)
+			.on('click', function (event) {
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				$body.removeClass('is-editmenu-visible');
+				$menu._show();
+
+			})
+			.append('<a class="close" href="#editmenu">Schließen</a>')
+			.append('<a class="reset" onclick="resetmenu()">Zurücksetzen</a>');
+
+
+
 
 		$body
 			.on('click', 'a[href="#menu"]', function (event) {
@@ -464,20 +666,72 @@ function highlightContact() {
 				$menu._toggle();
 
 			})
-			.on('click', function (event) {
+			.on('click', 'a[href="#nachricht"]', function (event) {
 
-				// Hide.
+				event.stopPropagation();
+				event.preventDefault();
+
+				// Toggle.
+				$nachricht._toggle();
+
+			})
+			.on('click', 'a[href="#editmenu"]', function (event) {
+
+				event.stopPropagation();
+				event.preventDefault();
+
+				// Hide menu, open edit menu.
+				$editmenu._show();
 				$menu._hide();
 
 			})
 			.on('keydown', function (event) {
 
-				// Hide on escape.
-				if (event.keyCode == 27)
-					$menu._hide();
+				// Toggle menu / hide contact form on escape, show contact form on enter.
+				if (event.keyCode == 27) {
+					if ($body.hasClass("is-nachricht-visible")) {
+						$nachricht._hide();
+					} else if ($body.hasClass("is-editmenu-visible")) {
+						$editmenu._hide();
+						$menu._show();
+					} else {
+						$menu._toggle();
+					}
+				} else if (event.keyCode == 13) {
+					if ($body.hasClass("is-menu-visible")) {
+						$menu._hide();
+					}
+					if ($body.hasClass("is-editmenu-visible")) {
+						$editmenu._hide();
+					}
+					$nachricht._show();
+				}
 
 			});
 
 	});
 
 })(jQuery);
+
+function showeditmenu() {
+	document.body.classList.add("is-editmenu-visible");
+}
+
+// Key listener
+// Why is it down here? I don't know, it doesn't work else.
+// Settings on 'e', home on 's'
+window.onkeyup = function (e) {
+	if (!document.body.classList.contains("is-nachricht-visible")) {
+		var key = e.keyCode ? e.keyCode : e.which;
+
+		if (key == 69) {
+			if (document.body.classList.contains("is-editmenu-visible")) {
+				document.body.classList.remove("is-editmenu-visible");
+			} else {
+				showeditmenu();
+			}
+		} else if (key == 83) {
+			window.location = "../../index.html";
+		}
+	}
+}
