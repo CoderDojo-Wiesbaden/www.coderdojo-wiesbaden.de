@@ -118,8 +118,27 @@ function starmenu(element) {
 	}
 }
 
-// Add smooth scrolling to all links
-$(document).ready(function () {
+function setArticleImages() {
+	var $tiles = $('.tiles > article');
+
+	$tiles.each(function () {
+
+		var $this = $(this),
+			$image = $this.find('.image'), $img = $image.find('img'),
+			$link = $this.find('.link'), $linkNoAnim = $this.find('.linkNoAnim'),
+			x;
+
+		// Image.
+
+		// Set image.
+		$this.css('background-image', 'url(' + $img.attr('src') + ')');
+	});
+}
+
+
+(function ($) {
+
+	// Add smooth scrolling to all links	
 	$("a").on('click', function (event) {
 
 		// Make sure this.hash has a value before overriding default behavior
@@ -141,10 +160,7 @@ $(document).ready(function () {
 			});
 		} // End if
 	});
-});
 
-
-(function ($) {
 
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',

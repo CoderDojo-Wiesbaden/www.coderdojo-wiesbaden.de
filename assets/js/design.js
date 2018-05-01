@@ -45,6 +45,17 @@ window.onload = function () {
 	setupDesign();
 	updateDesign();
 
+	// For image lazy loading
+	[].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+		img.setAttribute('src', img.getAttribute('data-src'));
+		img.onload = function () {
+			img.removeAttribute('data-src');
+		};
+		if (img.classList.contains("tileimg")) {
+			setArticleImages();
+		}
+	});
+
 	autosize(document.querySelectorAll('textarea'));
 
 	Sortable.create(document.getElementById("editmenu-list"), {
@@ -116,7 +127,7 @@ function setupDesign() {
 			setCookie("nav-workshops", "disabled", 10);
 		}
 
-		
+
 		console.log(navs);
 
 		var navnames = {
