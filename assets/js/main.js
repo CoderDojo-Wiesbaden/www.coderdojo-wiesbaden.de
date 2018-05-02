@@ -71,6 +71,34 @@ function toggleCookies() {
 	}
 }
 
+function toggleShortcuts() {
+	var editshortcuts = document.getElementById("toggleshortcuts");
+
+	if (getCookie("shortcutsDisabled") == "disabled") {
+		// Enable Shortcuts
+		deleteCookie("shortcutsDisabled");
+		editshortcuts.classList.add("special");
+		editshortcuts.innerHTML = "Tastenkombinationen: An";
+
+		var shortcutsToHide = document.getElementsByClassName("shortcutsToHide");
+		for(var toHide of shortcutsToHide) {
+			toHide.classList.remove("hidden");
+		}
+
+	} else {
+		// Disable Shortcuts
+		setCookie("shortcutsDisabled", "disabled", 356);
+		editshortcuts.classList.remove("special");
+		editshortcuts.innerHTML = "Tastenkombinationen: Aus";
+
+		var shortcutsToHide = document.getElementsByClassName("shortcutsToHide");
+		for(var toHide of shortcutsToHide) {
+			toHide.classList.add("hidden");
+		}
+
+	}
+}
+
 function resetmenu() {
 	var additionalToRemove = [
 		"cookiesDisabled",
@@ -704,6 +732,7 @@ function setArticleImages() {
 			.on('keydown', function (event) {
 
 				// Toggle menu / hide contact form on escape, show contact form on enter.
+				if (getCookie("shortcutsDisabled") != "disabled") {
 				if (event.keyCode == 27) {
 					if ($body.hasClass("is-nachricht-visible")) {
 						$nachricht._hide();
@@ -722,6 +751,11 @@ function setArticleImages() {
 					}
 					$nachricht._show();
 				}
+			} else {
+				if (event.keyCode == 27) {
+					$menu._toggle();
+				}
+			}
 
 			});
 
@@ -738,16 +772,18 @@ function showeditmenu() {
 // Settings on 'e', home on 's'
 window.onkeyup = function (e) {
 	if (!document.body.classList.contains("is-nachricht-visible")) {
-		var key = e.keyCode ? e.keyCode : e.which;
+		if (getCookie("shortcutsDisabled") != "disabled") {
+			var key = e.keyCode ? e.keyCode : e.which;
 
-		if (key == 69) {
-			if (document.body.classList.contains("is-editmenu-visible")) {
-				document.body.classList.remove("is-editmenu-visible");
-			} else {
-				showeditmenu();
+			if (key == 69) {
+				if (document.body.classList.contains("is-editmenu-visible")) {
+					document.body.classList.remove("is-editmenu-visible");
+				} else {
+					showeditmenu();
+				}
+			} else if (key == 83) {
+				window.location = "../../index.html";
 			}
-		} else if (key == 83) {
-			window.location = "../../index.html";
 		}
 	}
 }

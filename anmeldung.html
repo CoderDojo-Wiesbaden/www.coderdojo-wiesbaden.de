@@ -35,7 +35,6 @@
 </head>
 
 <body style="background-image: url(images/gross/koenidv-anmeldung.jpg)" class="imgbg imgoverlay">
-	<script src="assets/js/design.js"></script>
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -117,11 +116,23 @@
 				dann kannst du aber Funktionen, die diese benötigen, nicht mehr nutzen.
 				<a style="font-size: 0.8em" href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Was sind Cookies?</a>
 			</p>
+
 			<!-- Menu editing-->
 			<div style="height: 2em;"></div>
 			<h2>Menü</h2>
 			<ul id="editmenu-list" class="alt">
 				<!-- Menu editing content is added via JavaScript -->
+			</ul>
+
+			<!-- Use -->
+			<h2>Bedienung</h2>
+			<button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
+			<p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
+			<ul class="alt">
+				<li><code>Esc</code> Menü öffnen: Immer aktiv</li>
+				<li class="shortcutsToHide"><code>Enter</code> Eine Nachricht zu schreiben</li>
+				<li class="shortcutsToHide"><code>S</code> Zur Startseite navigieren</li>
+				<li class="shortcutsToHide"><code>E</code> Die Einstellungen aufrufen</li>
 			</ul>
 		</nav>
 
@@ -219,7 +230,7 @@
 								<h4 class="dark invert">
 									<span class="invert" style="font-size: 1.5em">1. </span>Bitte lies dir die
 									<a href="#hinweise">oberen Hinweise</a> durch.</h4>
-									<p class="dark invert">Diese einfachen Regeln musst du vor der Anmeldung beachten.</p>
+								<p class="dark invert">Diese einfachen Regeln musst du kennen.</p>
 							</div>
 							<a href="#hinweise" class="button special fit dark">Zu den Hinweisen</a>
 						</div>
@@ -318,6 +329,7 @@
 
 
 	<!-- Scripts -->
+	<script src="assets/js/design.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>

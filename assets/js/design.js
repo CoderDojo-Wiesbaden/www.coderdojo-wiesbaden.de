@@ -83,6 +83,17 @@ function setupDesign() {
 		document.getElementById("cookiewarning").classList.remove("hidden");
 	}
 
+	if (getCookie("shortcutsDisabled") == "disabled") {
+		var editshortcuts = document.getElementById("toggleshortcuts");
+		editshortcuts.classList.remove("special");
+		editshortcuts.innerHTML = "Tastenkombinationen: Aus";
+
+		var shortcutsToHide = document.getElementsByClassName("shortcutsToHide");
+		for(var toHide of shortcutsToHide) {
+			toHide.classList.add("hidden");
+		}
+	}
+
 	if (getCookie("cookiesDisabled") == "disabled") {
 
 		var editcookies = document.getElementById("editcookies");

@@ -13,7 +13,6 @@
 </head>
 
 <body style="background-image: url(images/gross/koenidv-kontakt.jpg)" class="imgbg imgoverlay">
-    <script src="assets/js/design.js"></script>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -95,11 +94,27 @@
                 sie deaktivieren, dann kannst du aber Funktionen, die diese benötigen, nicht mehr nutzen.
                 <a style="font-size: 0.8em" href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Was sind Cookies?</a>
             </p>
+
             <!-- Menu editing-->
             <div style="height: 2em;"></div>
             <h2>Menü</h2>
             <ul id="editmenu-list" class="alt">
                 <!-- Menu editing content is added via JavaScript -->
+            </ul>
+
+            <!-- Use -->
+            <h2>Bedienung</h2>
+            <button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
+            <p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
+            <ul class="alt">
+                <li>
+                    <code>Esc</code> Menü öffnen: Immer aktiv</li>
+                <li class="shortcutsToHide">
+                    <code>Enter</code> Eine Nachricht zu schreiben</li>
+                <li class="shortcutsToHide">
+                    <code>S</code> Zur Startseite navigieren</li>
+                <li class="shortcutsToHide">
+                    <code>E</code> Die Einstellungen aufrufen</li>
             </ul>
         </nav>
 
@@ -312,6 +327,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="assets/js/design.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
