@@ -164,6 +164,7 @@ function setupDesign() {
 		var i = 0;
 
 		document.getElementById("menu-list").innerHTML = "";
+		document.getElementById("editmenu-list").innerHTML = "";
 
 		for (var nav of navs) {
 

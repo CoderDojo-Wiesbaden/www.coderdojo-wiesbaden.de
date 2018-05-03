@@ -121,18 +121,24 @@
 			<div style="height: 2em;"></div>
 			<h2>Menü</h2>
 			<ul id="editmenu-list" class="alt">
+				<p>Bitte warte einen Moment...</p>
 				<!-- Menu editing content is added via JavaScript -->
 			</ul>
 
 			<!-- Use -->
+			<div style="height: 2em;"></div>
 			<h2>Bedienung</h2>
 			<button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
 			<p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
 			<ul class="alt">
-				<li><code>Esc</code> Menü öffnen: Immer aktiv</li>
-				<li class="shortcutsToHide"><code>Enter</code> Eine Nachricht zu schreiben</li>
-				<li class="shortcutsToHide"><code>S</code> Zur Startseite navigieren</li>
-				<li class="shortcutsToHide"><code>E</code> Die Einstellungen aufrufen</li>
+				<li>
+					<code>Esc</code> Menü öffnen: Immer aktiv</li>
+				<li class="shortcutsToHide">
+					<code>Enter</code> Eine Nachricht zu schreiben</li>
+				<li class="shortcutsToHide">
+					<code>S</code> Zur Startseite navigieren</li>
+				<li class="shortcutsToHide">
+					<code>E</code> Die Einstellungen aufrufen</li>
 			</ul>
 		</nav>
 
@@ -226,34 +232,39 @@
 					<div class="row">
 
 						<div class="4u 12u$(medium)">
-							<div class="registerbg" style="background-image: url(images/1.svg);">
-								<h4 class="dark invert">
-									<span class="invert" style="font-size: 1.5em">1. </span>Bitte lies dir die
-									<a href="#hinweise">oberen Hinweise</a> durch.</h4>
-								<p class="dark invert">Diese einfachen Regeln musst du kennen.</p>
-							</div>
+							<a href="#hinweise">
+								<div class="registerbg" style="background-image: url(images/1.svg);">
+									<h4 class="dark invert">
+										<span class="invert" style="font-size: 1.5em">1. </span>Bitte lies dir die oberen Hinweise durch.</h4>
+									<p class="dark invert">Diese einfachen Regeln musst du kennen.</p>
+								</div>
+							</a>
 							<a href="#hinweise" class="button special fit dark">Zu den Hinweisen</a>
 						</div>
 
 						<div class="4u 12u$(medium)">
-							<div class="registerbg" style="background-image: url(images/2.svg);">
-								<h4 class="dark invert">
-									<span style="font-size: 1.5em">2. </span>Anmeldung über
-									<a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" target="_blank">coderdojo.com</a>.</h4>
-								<p class="dark invert">Auf der Seite von CoderDojo Zen kannst du unsere nächsten Termine finden und dich anmelden.</p>
-							</div>
+							<a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" target="_blank" ref="noopen">
+								<div class="registerbg" style="background-image: url(images/2.svg);">
+									<h4 class="dark invert">
+										<span style="font-size: 1.5em">2. </span>Anmeldung über coderdojo.com.
+									</h4>
+									<p class="dark invert">Auf der Seite von CoderDojo Zen kannst du unsere nächsten Termine finden und dich anmelden.</p>
+								</div>
+							</a>
 							<a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit dark" target="_blank">Jetzt anmelden</a>
 						</div>
 
 						<div class="4u 12u$(medium)">
-							<div class="registerbg" style="background-image: url(images/3.svg)">
-								<h4 class="dark invert">
-									<span style="font-size: 1.5em">3. </span>
-									<a href="files/Vertrag CoderDojo.pdf" target="_blank">Formular</a> ausfüllen (lassen).</h4>
-								<p class="dark invert">Die Erziehungsberechtigten müssen eine Erklärung unterschreiben, in der einige rechtliche Dinge erläutert werden.
-									<br/>Ohne Vorlage dieser zu Beginn des Dojos ist eine Teilnahme nicht möglich!
-									<br/>Die Erklärung kann auch vor Ort unterschrieben werden.</p>
-							</div>
+							<a href="files/Vertrag CoderDojo.pdf" target="_blank" ref="noopen">
+								<div class="registerbg" style="background-image: url(images/3.svg)">
+									<h4 class="dark invert">
+										<span style="font-size: 1.5em">3. </span>
+										Formular ausfüllen (lassen).</h4>
+									<p class="dark invert">Die Erziehungsberechtigten müssen eine Erklärung unterschreiben, in der einige rechtliche Dinge erläutert werden.
+										<br/>Ohne Vorlage dieser zu Beginn des Dojos ist eine Teilnahme nicht möglich!
+										<br/>Die Erklärung kann auch vor Ort unterschrieben werden.</p>
+								</div>
+							</a>
 							<a href="files/Vertrag CoderDojo.pdf" class="button special fit dark" target="_blank">Formular drucken</a>
 						</div>
 

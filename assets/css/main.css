@@ -41,7 +41,18 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 1em;
-	margin-bottom: 1em;
+    margin-bottom: 1em;
+    transition: ease-in-out 300ms;
+}
+
+.registerbg:hover {
+    box-shadow: 0 0 40px #00051f;
+    background: #eaeaea;
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    transition: ease-in-out 300ms;
 }
 
 img {
