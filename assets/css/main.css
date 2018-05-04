@@ -137,6 +137,7 @@ div#cookiewarning {
     opacity: 1;
 }
 
+
 /* Reset */
 
 html,
@@ -1734,11 +1735,19 @@ a {
     border-bottom: dotted 1px;
     color: inherit;
     text-decoration: none;
+    transition: ease-in-out 300ms;
 }
 
 a:hover {
     border-bottom-color: transparent;
-    color: #9bf1ff !important;
+    color: #9bf1ff;
+}
+
+a.invert:hover {
+    color: #242943;
+    text-shadow: 0 0 10px #404040;
+    border-bottom-color: transparent;
+    transition: ease-in-out 300ms;
 }
 
 a:active {
