@@ -166,6 +166,11 @@ function setArticleImages() {
 
 (function ($) {
 
+	if ($("#includeFooter") != null && document.getElementById("includeFooter").innerHTML == "") {
+		$("#includeFooter").load("../../footer.html");
+	}
+
+
 	// Add smooth scrolling to all links	
 	$("a").on('click', function (event) {
 
