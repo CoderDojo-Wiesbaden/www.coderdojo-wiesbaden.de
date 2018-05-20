@@ -1,6 +1,4 @@
 lightDesign = false;
-emailaddress = "coderdojo-team@bonifatius-wiesbaden.de"; //This will be shown on every page
-phonenumber = "0611 1575394"; //This will be shown on every page
 
 var defaultnavs = [
 	"home",
@@ -38,9 +36,6 @@ function getCookie(cname) {
 
 window.onload = function () {
 	document.getElementById("menuicon").innerHTML = "Menu";
-	document.getElementById("mailaddress").innerHTML = emailaddress;
-	document.getElementById("phonenumber").innerHTML = phonenumber;
-	document.getElementById("designToggler").innerHTML += " (Beta)";
 
 	setupDesign();
 	updateDesign();
