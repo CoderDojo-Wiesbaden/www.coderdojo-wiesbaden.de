@@ -81,7 +81,7 @@ function toggleShortcuts() {
 		editshortcuts.innerHTML = "Tastenkombinationen: An";
 
 		var shortcutsToHide = document.getElementsByClassName("shortcutsToHide");
-		for(var toHide of shortcutsToHide) {
+		for (var toHide of shortcutsToHide) {
 			toHide.classList.remove("hidden");
 		}
 
@@ -92,7 +92,7 @@ function toggleShortcuts() {
 		editshortcuts.innerHTML = "Tastenkombinationen: Aus";
 
 		var shortcutsToHide = document.getElementsByClassName("shortcutsToHide");
-		for(var toHide of shortcutsToHide) {
+		for (var toHide of shortcutsToHide) {
 			toHide.classList.add("hidden");
 		}
 
@@ -143,6 +143,42 @@ function starmenu(element) {
 		document.getElementById(element + "-link").classList.add("button");
 		document.getElementById("edit-star-" + element).classList.add("special");
 		setCookie(element, "special", 365);
+	}
+}
+
+/* Readout feature */
+function toggleAudio(file, button) {
+	var play = "Vorlesen",
+		stop = "Stoppen";
+
+	var player = document.getElementById("audioPlayer");
+	var source = document.getElementById("audioSource");
+
+	if (player.paused) {
+		//Change source if necessary
+		if (!source.src.endsWith(file)) {
+			source.src = "audio/" + file;
+			player.load();
+		}
+		//Play and change button text
+		player.play();
+		button.innerHTML = stop;
+	} else {
+		//Pause, Reset time (start at the beginning next time) and change button text
+		player.pause();
+		player.currentTime = 0;
+		button.innerHTML = play;
+		//If the button for another file has been triggered without pausing the last playing file,
+		//change the source, play it and change the text of all buttons (since we dont know what was playing last)
+		if (!source.src.endsWith(file)) {
+			source.src = "audio/" + file;
+			player.load();
+			player.play();
+			Array.prototype.forEach.call(document.getElementsByClassName("readoutbutton"), function (element, index, array) {
+				element.innerHTML = play;
+			});
+			button.innerHTML = stop;
+		}
 	}
 }
 
@@ -738,29 +774,29 @@ function setArticleImages() {
 
 				// Toggle menu / hide contact form on escape, show contact form on enter.
 				if (getCookie("shortcutsDisabled") != "disabled") {
-				if (event.keyCode == 27) {
-					if ($body.hasClass("is-nachricht-visible")) {
-						$nachricht._hide();
-					} else if ($body.hasClass("is-editmenu-visible")) {
-						$editmenu._hide();
-						$menu._show();
-					} else {
+					if (event.keyCode == 27) {
+						if ($body.hasClass("is-nachricht-visible")) {
+							$nachricht._hide();
+						} else if ($body.hasClass("is-editmenu-visible")) {
+							$editmenu._hide();
+							$menu._show();
+						} else {
+							$menu._toggle();
+						}
+					} else if (event.keyCode == 13) {
+						if ($body.hasClass("is-menu-visible")) {
+							$menu._hide();
+						}
+						if ($body.hasClass("is-editmenu-visible")) {
+							$editmenu._hide();
+						}
+						$nachricht._show();
+					}
+				} else {
+					if (event.keyCode == 27) {
 						$menu._toggle();
 					}
-				} else if (event.keyCode == 13) {
-					if ($body.hasClass("is-menu-visible")) {
-						$menu._hide();
-					}
-					if ($body.hasClass("is-editmenu-visible")) {
-						$editmenu._hide();
-					}
-					$nachricht._show();
 				}
-			} else {
-				if (event.keyCode == 27) {
-					$menu._toggle();
-				}
-			}
 
 			});
 

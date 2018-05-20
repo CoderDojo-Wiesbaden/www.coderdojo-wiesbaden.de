@@ -158,16 +158,16 @@
 				<div class="inner">
 					<div class="row">
 						<div class="6u 12u$(small)">
-							<h3 class="dark">Du möchtest Programmieren lernen?</h3>
-							<p class="dark">Im Coderdojo lernst du in entspannter Atmosphäre, wie du einen Computer programmieren kannst. Unser Angebot im CoderDojo
-								Wiesbaden richtet sich an Kinder und Jugendliche im Alter von 8 bis 17 Jahren. Du kannst bei uns mit HTML 5 und CSS
+							<h3 class="dark">Du möchtest Programmieren lernen?</h3><button class="small readoutbutton" onclick="toggleAudio('willkommen-1.mp3', this)">Vorlesen</button>
+							<p class="dark">Im CoderDojo lernst du in entspannter Atmosphäre, wie du einen Computer programmieren kannst. Unser Angebot im CoderDojo
+								Wiesbaden richtet sich an Kinder und Jugendliche im Alter von 8 bis 17 Jahren. Du kannst bei uns mit HTML und CSS
 								Webseiten wie diese und mit Java Minecraft-Plugins oder
 								<a href="android.html">Android-Apps</a> programmieren, mit Arduinos und
-								<a href="esp.html">ESPs</a> das Feld der Robotik und des Internets der Dinge erkunden, per 3D-Druck deine Ideen in deine Hände bringen
-								und vieles mehr.</p>
+								<a href="esp.html">ESPs</a> das Feld der Robotik und des Internets der Dinge erkunden, per 3D-Druck deine Ideen in deine eigenen Hände
+								bringen und vieles mehr.</p>
 						</div>
 						<div class="6u$ 12u$(small)">
-							<h3 class="dark">Was ist ein CoderDojo?</h3>
+							<h3 class="dark">Was ist ein CoderDojo?</h3><button class="small readoutbutton" onclick="toggleAudio('willkommen-2.mp3', this)">Vorlesen</button>
 							<p class="dark">CoderDojos sind ein Netzwerk von freien Programmierclubs für Kinder und Jugendliche. Diese unabhängigen Clubs werden
 								von Freiwilligen getragen. Zusammenarbeit und Spaß fördern hier die Entwicklung von Fähigkeiten, die oft nicht in
 								den Schulen vermittelt werden. CoderDojos sind frei und offen für Jeden. </p>
@@ -212,6 +212,10 @@
 						</div>
 					</div>
 			</section>
+
+			<audio id="audioPlayer" preload="none">
+				<source id="audioSource" src="audio/willkommen-1.mp3" type="audio/mp3"> Your browser does not support the audio element.
+			</audio>
 
 			<div id="includeFooter"></div>
 
