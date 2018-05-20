@@ -158,16 +158,16 @@
 				<div class="inner">
 					<div class="row">
 						<div class="6u 12u$(small)">
-							<h3 class="dark">Du möchtest Programmieren lernen?</h3>
-							<p class="dark">Im Coderdojo lernst du in entspannter Atmosphäre, wie du einen Computer programmieren kannst. Unser Angebot im CoderDojo
-								Wiesbaden richtet sich an Kinder und Jugendliche im Alter von 8 bis 17 Jahren. Du kannst bei uns mit HTML 5 und CSS
+							<h3 class="dark"><a class="icon fa-volume-up readoutbutton" onclick="toggleAudio('willkommen-1.mp3', this)"></a>&nbsp;&nbsp;Du möchtest Programmieren lernen?</h3>
+							<p class="dark">Im CoderDojo lernst du in entspannter Atmosphäre, wie du einen Computer programmieren kannst. Unser Angebot im CoderDojo
+								Wiesbaden richtet sich an Kinder und Jugendliche im Alter von 8 bis 17 Jahren. Du kannst bei uns mit HTML und CSS
 								Webseiten wie diese und mit Java Minecraft-Plugins oder
 								<a href="android.html">Android-Apps</a> programmieren, mit Arduinos und
-								<a href="esp.html">ESPs</a> das Feld der Robotik und des Internets der Dinge erkunden, per 3D-Druck deine Ideen in deine Hände bringen
-								und vieles mehr.</p>
+								<a href="esp.html">ESPs</a> das Feld der Robotik und des Internets der Dinge erkunden, per 3D-Druck deine Ideen in deine eigenen Hände
+								bringen und vieles mehr.</p>
 						</div>
 						<div class="6u$ 12u$(small)">
-							<h3 class="dark">Was ist ein CoderDojo?</h3>
+							<h3 class="dark"><a class="icon fa-volume-up readoutbutton" onclick="toggleAudio('willkommen-2.mp3', this)"></a>&nbsp;&nbsp;Was ist ein CoderDojo?</h3>
 							<p class="dark">CoderDojos sind ein Netzwerk von freien Programmierclubs für Kinder und Jugendliche. Diese unabhängigen Clubs werden
 								von Freiwilligen getragen. Zusammenarbeit und Spaß fördern hier die Entwicklung von Fähigkeiten, die oft nicht in
 								den Schulen vermittelt werden. CoderDojos sind frei und offen für Jeden. </p>
@@ -181,13 +181,13 @@
 							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
 						</div>
 						<div class="6u 12u$(small)">
-							<h3 class="dark">Über das CoderDojo Wiesbaden</h3>
-							<p class="dark">Das CoderDojo Wiesbaden findet in den Jugendräumen der Katholischen Kirchengemeinde St. Bonifatius statt (Anfahrt).
-								Aus dem caritativen Auftrag heraus, Kindern etwas Gutes für ihren Leben mitzugeben, unterstützt die Gemeinde das
-								Projekt mit Räumen und pädagogischem Personal.
-								<b class="dark">Religiöse Zugehörigkeit und Glauben sind aber keine Kriterien für die Teilnahme.</b>
-								Die CoderDojos stehen Kindern und Jugendlichen jeder Konfession offen. Jungen und Mädchen werden gleichermaßen gefördert.
-								<br/> Die Dojos sind eine offene Veranstaltung, bei der Eltern zur Mitarbeit ermutigt werden.
+							<h3 class="dark"><a class="icon fa-volume-up readoutbutton" onclick="toggleAudio('willkommen-3.mp3', this)"></a>&nbsp;&nbsp;Über das CoderDojo Wiesbaden</h3>
+							<p class="dark">Das CoderDojo Wiesbaden findet <a href="raeumlichkeiten.html">in den Jugendräumen</a> der katholischen Kirchengemeinde St. Bonifatius statt.
+								Aus dem caritativen Auftrag heraus, Kindern etwas Gutes für ihr Leben mitzugeben, unterstützt die Gemeinde das
+								Projekt unter anderem mit Räumen.
+								<br/><b class="dark">Religiöse Zugehörigkeit und Glauben sind aber keine Kriterien für die Teilnahme.</b>
+								Das Dojo steht Kindern und Jugendlichen jeder Konfession offen. Jungen und Mädchen werden gleichermaßen gefördert.
+								<br/> CoderDojos sind eine offene Veranstaltung, bei der Eltern zur Mitarbeit ermutigt werden.
 								<b class="dark">Bei jüngeren Kindern unter 12 Jahren muss ein Erziehungsberechtigter anwesend sein.</b>
 								<br/> Die Teilnahme ist kostenlos, wir bitten aber die Eltern sich an der Durchführung, z.B. durch Übernahme des Caterings,
 								zu beteiligen.</p>
@@ -200,7 +200,7 @@
 							</center>
 						</div>
 						<div class="6u$ 12u$(small)">
-							<h3 class="dark">Wie nehme ich teil?</h3>
+							<h3 class="dark"><a class="icon fa-volume-up readoutbutton" onclick="toggleAudio('willkommen-4.mp3', this)"></a>&nbsp;&nbsp;Wie nehme ich teil?</h3>
 							<p class="dark">Wir können nur eine begrenzte Anzahl an Plätzen anbieten, daher musst du dich vor jedem Termin
 								<a href="anmeldung.html">anmelden</a>. Außerdem müssen deine Eltern das
 								<a href="vertrag.pdf" , target="_blank">Formular</a> ausfüllen, das du bei Beginn des Dojos abgibst.
@@ -212,6 +212,10 @@
 						</div>
 					</div>
 			</section>
+
+			<audio id="audioPlayer" preload="none">
+				<source id="audioSource" src="audio/willkommen-1.mp3" type="audio/mp3"> Your browser does not support the audio element.
+			</audio>
 
 			<div id="includeFooter"></div>
 
