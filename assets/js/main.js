@@ -186,6 +186,13 @@ function toggleAudio(file, button) {
 	}
 }
 
+function setStopAudioIcon() {
+	Array.prototype.forEach.call(document.getElementsByClassName("readoutbutton"), function (element, index, array) {
+		element.classList.remove("fa-stop");
+		element.classList.add("fa-volume-up");
+	});
+}
+
 function setArticleImages() {
 	var $tiles = $('.tiles > article');
 
@@ -205,6 +212,8 @@ function setArticleImages() {
 
 
 (function ($) {
+
+	$("#audioPlayer").on("ended", setStopAudioIcon);
 
 	if ($("#includeFooter") != null && document.getElementById("includeFooter").innerHTML == "") {
 		$("#includeFooter").load("../../footer.html");

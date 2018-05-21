@@ -3,5 +3,43 @@
         "public": "/",
         "cleanUrls": true,
         "trailingSlash": false
-    }
+    },
+    "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.*",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=2628000"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(html|css|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=21600"
+            }
+          ]
+        },
+        {
+          "source": "**/*.min.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=2628000"
+            }
+          ]
+        }
+      ]
 }
