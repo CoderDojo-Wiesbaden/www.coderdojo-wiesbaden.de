@@ -7,8 +7,6 @@
     background-color: #242943;
 }
 
-.BtnGroup:first-child > * > .btn.float {}
-
 .imgoverlay:before {
     background-color: rgba(36, 41, 67, 0.96);
     position: fixed;

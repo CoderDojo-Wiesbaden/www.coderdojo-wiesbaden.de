@@ -215,21 +215,31 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    });
+	coll[i].addEventListener("click", function () {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	});
 }
 
 
 (function ($) {
 
 	$("#audioPlayer").on("ended", setStopAudioIcon);
+
+	/* Really inefficient for now 
+	// Include function (may replace #includeFooter)
+	[].forEach.call(document.querySelectorAll('div[data-include]'), function (div) {
+		$("div[data-include]").load("../../" + div.getAttribute('data-include')); //div.load() doesn't work
+		div.onload = function () {
+			div.removeAttribute('data-include');
+		};
+	});
+	*/
 
 	if ($("#includeFooter") != null && document.getElementById("includeFooter").innerHTML == "") {
 		$("#includeFooter").load("../../footer.html");
