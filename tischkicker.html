@@ -2,10 +2,9 @@
 <html lang="de">
 
 <head>
-	<title alt="CoderDojo Wiesbaden">CoderDojo Wiesbaden</title>
+	<title>Tischkicker | CoderDojo Wiesbaden</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-	<meta name="Description" content="Im CoderDojo Wiesbaden kannst du ganz entspannt programmieren lernen. Jeden ersten Samstag im Monat.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="favicon.ico" rel="shortcut icon" />
@@ -13,8 +12,7 @@
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 
-<body style="background-image: url(images/banner.jpg)" class="imgbg imgoverlay imgfixed">
-	<script src="assets/js/design.js"></script>
+<body style="background-image: url(images/koenidv-tischkicker.jpg)" class="imgbg imgoverlay">
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -108,6 +106,19 @@
 
 			<!-- Use -->
 			<div style="height: 2em;"></div>
+			<h2>Bedienung</h2>
+			<button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
+			<p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
+			<ul class="alt">
+				<li>
+					<code>Esc</code> Menü öffnen: Immer aktiv</li>
+				<li class="shortcutsToHide">
+					<code>Enter</code> Eine Nachricht zu schreiben</li>
+				<li class="shortcutsToHide">
+					<code>S</code> Zur Startseite navigieren</li>
+				<li class="shortcutsToHide">
+					<code>E</code> Die Einstellungen aufrufen</li>
+			</ul>
 		</nav>
 
 		<!-- Cookie warning -->
@@ -129,144 +140,100 @@
 			</div>
 		</div>
 
-
-		<!-- Title -->
-		<section id="banner" class="major">
-			<div class="inner">
-
-				<header class="major">
-					<h1>Willkommen beim CoderDojo Wiesbaden!</h1>
-				</header>
-
-				<div class="content">
-					<p>Du bist zwischen 8 bis 17 Jahre alt und liebst Computer?
-						<br /> Schau bei uns vorbei!</p>
-
-					<ul class="actions">
-						<li>
-							<a href="anmeldung.html" class="button next scrolly">Jetzt Anmelden!</a>
-						</li>
-					</ul>
-
-				</div>
-			</div>
-		</section>
-
 		<!-- Main -->
 		<div id="main">
 
-			<!-- Links -->
-			<section id="links" class="tiles">
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/benjamin-willkommen.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="willkommen.html" class="link" title="Über uns">Über uns</a>
-						</h3>
-						<p>Im Coderdojo lernst Du in entspannter Atmosphäre, wie Du einen Computer programmieren kannst. </p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="/images/koenidv-anmeldung.jpg" alt="">
-					</span>
-					<header class="major">
-						<h3>
-							<a href="anmeldung.html" class="link" title="Termine und Anmeldung">Termine und Anmeldung</a>
-						</h3>
-						<p>Das CoderDojo Wiesbaden findet jeden ersten Samstag im Monat von 12 bis 17 Uhr statt.</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-anfahrt.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="anfahrt.html" class="link" title="Anfahrt">Anfahrt</a>
-						</h3>
-						<p>Hier musst du einfach hin.</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-kontakt.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="raeumlichkeiten.html" class="link" title="Räume">R&auml;ume</a>
-						</h3>
-						<p>Du brauchst noch Unterstützung?</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-ressourcen.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="ressourcen.html" class="link" title="Ressourcen">Hilfreiche Ressourcen</a>
-						</h3>
-						<p>Klicke hier. Ein Wunder wird geschehen. Vielleicht auch nicht.</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-workshops.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="workshops.html" class="link" title="Workshops">Workshops und Projekte</a>
-						</h3>
-						<p>Wir haben schon einmal ein paar Ideen für dich vorbereitet.</p>
-					</header>
-				</article>
-
-			</section>
-
-			<!-- Question -->
-			<section id="frage">
+			<!-- Title -->
+			<section id="titel" class="major">
 				<div class="inner">
 					<header class="major">
-						<h2 class="dark">Was soll hier stehen?</h2>
+						<h1 class="dark">Tischkicker goes Arduino</h1>
+						<h2 class="dark">Die Seite wird später fertiggestellt.</h2>
 					</header>
-					<p class="dark">Nun, das wissen wir selbst nicht. Aber vielleicht ja du? Komm ins CoderDojo und verbessere unsere Webseite!</p>
-					<ul class="actions">
-						<li>
-							<a href="anmeldung.htmlanmeldung" class="button next dark">Los gehts!</a>
-						</li>
-					</ul>
+				</div>
+			</section>
+
+			<!-- Information -->
+			<section id="information">
+				<div class="inner">
+					<div class="row">
+
+						<div class="6u 12u$(small)">
+							<h3 class="dark">Was ist das?</h3>
+							<p class="dark">Unser Tischkicker 👌.
+							</p>
+						</div>
+
+						<div class="6u$ 12u$(small)">
+							<h3 class="dark">Was kann ich damit machen?</h3>
+							<p class="dark">Spielen 👌.
+							</p>
+						</div>
+
+						<div class="12u$ 12u$(small)">
+							<h3 class="dark">Was brauche ich dafür?</h3>
+							<ul class="dark">
+
+								<li>
+									Einen Ball.
+								</li>
+
+								<li>
+									Können.
+								</li>
+
+								<li>
+									Gl&uuml;ck.
+								</li>
+
+							</ul>
+						</div>
+
+						<div class="12u$ 12u$(small)">
+							<center>
+								<div class="6u$ 12u$">
+									<a href="anmeldung.html" class="button special fit dark">Jetzt anmelden!</a>
+								</div>
+							</center>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- Resources -->
+			<section id="ressourcen">
+				<div class="inner">
+					<div class="row">
+
+						<div class="6u 12u$(small)">
+							<a href="ressourcen.html" style="border-bottom: none">
+								<h3 class="dark">Ressourcen</h3>
+							</a>
+							<a class="button fit dark" href="http://coderdojo-wiesbaden.org" target="_blank">Code</a>
+
+							<br/>
+						</div>
+
+					</div>
 				</div>
 			</section>
 
 			<div id="includeFooter"></div>
 
 		</div>
-	</div>
-	
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/autosize.min.js"></script>
-	<script src="assets/js/Sortable.min.js"></script>
 
-	<script>
-
-	</script>
-
+		<!-- Scripts -->
+		<script src="assets/js/design.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/autosize.min.js"></script>
+		<script src="assets/js/Sortable.min.js"></script>
 
 </body>
 
