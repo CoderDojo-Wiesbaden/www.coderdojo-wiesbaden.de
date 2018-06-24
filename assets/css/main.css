@@ -43,6 +43,7 @@
 	padding: 1em;
     margin-bottom: 1em;
     transition: ease-in-out 200ms;
+    border-radius: 0.2em;
 }
 
 .registerbg:hover {
@@ -53,6 +54,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
     transition: ease-in-out 200ms;
+}
+
+.blogentry {
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 0.2em;
 }
 
 img {
@@ -66,6 +74,11 @@ img[data-src] {
 
 .invert {
 	color: #404040;
+}
+.button.invert,
+button.invert {
+    box-shadow: inset 0 0 0 1px #404040;
+    color: #404040;
 }
 
 .hidden {
@@ -2594,7 +2607,7 @@ button,
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: transparent;
     border: 0;
-    border-radius: 0;
+    border-radius: 0.2em;
     box-shadow: inset 0 0 0 2px #ffffff;
     color: #ffffff;
     cursor: pointer;
