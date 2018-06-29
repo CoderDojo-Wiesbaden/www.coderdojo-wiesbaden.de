@@ -170,9 +170,9 @@ function setupDesign() {
 			if (getCookie("nav-" + nav) == "enabled" || "special") {
 				var menuElement = document.createElement("li");
 				if (getCookie("nav-" + nav) == "special") {
-					menuElement.innerHTML = "<a id=\"nav-" + nav + "-link\" href=\"" + navlinks[nav] + "\" class=\"button special fit dark\">" + navnames[nav] + "</a>";
+					menuElement.innerHTML = "<a id=\"nav-" + nav + "-link\" href=\"" + navlinks[nav] + "\" class=\"button special fit\">" + navnames[nav] + "</a>";
 				} else {
-					menuElement.innerHTML = "<a id=\"nav-" + nav + "-link\" href=\"" + navlinks[nav] + "\" class=\"special fit dark\">" + navnames[nav] + "</a>";
+					menuElement.innerHTML = "<a id=\"nav-" + nav + "-link\" href=\"" + navlinks[nav] + "\" class=\"special fit\">" + navnames[nav] + "</a>";
 				}
 				menuElement.id = "nav-" + nav;
 				document.getElementById("menu-list").appendChild(menuElement);
@@ -221,20 +221,46 @@ function setupDesign() {
 
 //Update Design
 function updateDesign() {
-
-	if (localStorage.getItem("design") == "light") {
+	if (localStorage.getItem("design") == "standard") {
+		document.getElementById("standardThemeBtn").classList.add("special");
+		document.getElementById("whiteThemeBtn").classList.remove("special");
+		document.getElementById("grayThemeBtn").classList.remove("special");
+		
+	} else if (localStorage.getItem("design") == "white") {
+		document.getElementById("whiteThemeBtn").classList.add("special");
+		document.getElementById("standardThemeBtn").classList.remove("special");
+		document.getElementById("grayThemeBtn").classList.remove("special");
+		
+		
 
 		objects = document.getElementsByClassName("theme");
 		for (var i = 0; i < objects.length; i++) {
-			console.log(i);
-			console.log(objects.length);
 			objects[i].classList.add("whitetheme");
 		}
 
 		document.body.classList.remove("imgoverlay");
 		document.body.classList.add("imgoverlaylight");
 
+	} else if (localStorage.getItem("design") == "gray") {
+		document.getElementById("grayThemeBtn").classList.add("special");
+		document.getElementById("standardThemeBtn").classList.remove("special");
+		document.getElementById("whiteThemeBtn").classList.remove("special");
+		
 	}
+}
+
+//Theme chooser
+function chooseStandardTheme() {
+	localStorage.setItem("design", "standard");
+	location.reload();
+}
+function chooseWhiteTheme() {
+	localStorage.setItem("design", "white");
+	updateDesign();
+}
+function chooseGrayTheme() {
+	localStorage.setItem("design", "gray");
+	updateDesign();
 }
 
 function getNextDojoDate() {

@@ -15,14 +15,6 @@
     width: 100%;
 }
 
-.imgoverlaylight:before {
-    background-color: rgba(255, 255, 255, 0.9);
-    position: fixed;
-    content: " ";
-    height: 100%;
-    width: 100%;
-}
-
 .imgfixed {
     background-attachment: fixed;
 }
@@ -84,6 +76,10 @@ button.invert {
 button.invert:hover {
     box-shadow: inset 0 0 0 1px #7ea8c8;
     color: #7ea8c8;
+}
+
+.btngroup :first-child {
+    border-radius: 0;
 }
 
 
@@ -1763,7 +1759,7 @@ a:hover {
 }
 
 a.invert:hover {
-    color: #7ea8c8;<
+    color: #7ea8c8;
     border-bottom-color: transparent;
     transition: ease-in-out 300ms;
 }
@@ -4431,8 +4427,19 @@ body.is-editmenu-visible #editmenu .inner {
     box-shadow: inset 0 0 0 2px #7ea8c8;
     color: #7ea8c8;
 }
-.imgoverlay.whitetheme:before {
-    background-color: rgba(255, 255, 255, 0.9);
+.imgoverlaylight:before {
+    background-color: rgba(255, 255, 255, 0.92);
+    position: fixed;
+    content: " ";
+    height: 100%;
+    width: 100%;
+}
+.whitenav:before {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    content: " ";
+    height: 100%;
+    width: 100%;
 }
 .blogentry.whitetheme {
     box-shadow: 0 0 20px rgba(64, 64, 64, 0.4);
