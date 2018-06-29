@@ -77,9 +77,15 @@ img[data-src] {
 }
 .button.invert,
 button.invert {
-    box-shadow: inset 0 0 0 1px #404040;
+    box-shadow: inset 0 0 0 1px #808080;
     color: #404040;
 }
+.button.invert:hover,
+button.invert:hover {
+    box-shadow: inset 0 0 0 1px #7ea8c8;
+    color: #7ea8c8;
+}
+
 
 .hidden {
     display: none;
@@ -1757,8 +1763,7 @@ a:hover {
 }
 
 a.invert:hover {
-    color: #242943;
-    text-shadow: 0 0 10px #404040;
+    color: #7ea8c8;<
     border-bottom-color: transparent;
     transition: ease-in-out 300ms;
 }
@@ -4406,4 +4411,40 @@ body.is-editmenu-visible #editmenu .inner {
     transform: none;
     opacity: 1;
     visibility: visible;
+}
+
+
+/* White theme */
+
+.whitetheme {
+    color: #404040;
+}
+.sub.whitetheme {
+        color: #808080;
+}
+.button.whitetheme,
+.button.whitetheme {
+    box-shadow: inset 0 0 0 2px #808080;
+}
+.button.whitetheme:hover,
+.button.whitetheme:hover {
+    box-shadow: inset 0 0 0 2px #7ea8c8;
+    color: #7ea8c8;
+}
+.imgoverlay.whitetheme:before {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.blogentry.whitetheme {
+    box-shadow: 0 0 20px rgba(64, 64, 64, 0.4);
+}
+.button.special.whitetheme,
+button.special.whitetheme {
+    box-shadow: 0 0 20px rgba(64, 64, 64, 0.2);
+    transition: 300ms;
+}
+.button.special.whitetheme:hover,
+button.special.whitetheme:hover {
+    background-color: #fafafa;
+    box-shadow: 0 0 5px rgba(64, 64, 64, 0.2);
+    transition: 300ms;
 }
