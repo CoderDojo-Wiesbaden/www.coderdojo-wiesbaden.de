@@ -8,7 +8,8 @@ var defaultnavs = [
 	"approach",
 	"rooms",
 	"resources",
-	"workshops"
+	"workshops",
+	"blog"
 ]
 
 function setCookie(cname, cvalue, exdays) {
@@ -136,6 +137,9 @@ function setupDesign() {
 		if (getCookie("nav-workshops") == "") {
 			setCookie("nav-workshops", "disabled", 10);
 		}
+		if (getCookie("nav-blog") == "") {
+			setCookie("nav-blog", "enabled", 10);
+		}
 
 
 		console.log(navs);
@@ -148,7 +152,8 @@ function setupDesign() {
 			approach: "Anfahrt",
 			rooms: "R&auml;ume",
 			resources: "Ressourcen",
-			workshops: "Workshops"
+			workshops: "Workshops",
+			blog: "Blog"
 		};
 		var navlinks = {
 			home: "index.html",
@@ -158,7 +163,8 @@ function setupDesign() {
 			approach: "anfahrt.html",
 			rooms: "raeumlichkeiten.html",
 			resources: "ressourcen.html",
-			workshops: "workshops.html"
+			workshops: "workshops.html",
+			blog: "https://blog.cdwi.de"
 		};
 		var i = 0;
 
