@@ -164,7 +164,7 @@ function setupDesign() {
 			rooms: "raeumlichkeiten.html",
 			resources: "ressourcen.html",
 			workshops: "workshops.html",
-			blog: "https://blog.cdwi.de"
+			blog: "https://blog.cdwi.de/?d=blue"
 		};
 		var i = 0;
 
