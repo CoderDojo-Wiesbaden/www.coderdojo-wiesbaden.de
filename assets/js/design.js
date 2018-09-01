@@ -1,4 +1,5 @@
 lightDesign = false;
+baseUrl = "https://coderdojo-wiesbaden.de/";
 
 var defaultnavs = [
 	"home",
@@ -156,14 +157,14 @@ function setupDesign() {
 			blog: "Blog"
 		};
 		var navlinks = {
-			home: "index.html",
-			about: "willkommen.html",
-			signup: "anmeldung.html",
+			home: baseUrl + "index.html",
+			about: baseUrl + "willkommen.html",
+			signup: baseUrl + "anmeldung.html",
 			signupdirect: "https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius",
-			approach: "anfahrt.html",
-			rooms: "raeumlichkeiten.html",
-			resources: "ressourcen.html",
-			workshops: "workshops.html",
+			approach: baseUrl + "anfahrt.html",
+			rooms: baseUrl + "raeumlichkeiten.html",
+			resources: baseUrl + "ressourcen.html",
+			workshops: baseUrl + "workshops.html",
 			blog: "https://blog.cdwi.de/?d=blue"
 		};
 		var i = 0;
