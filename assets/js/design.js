@@ -75,10 +75,12 @@ window.onload = function () {
 //Set the design up
 function setupDesign() {
 
+	/* Disabled. Hope this is legal.
 	//Cookie warning
 	if (getCookie("seenCookieWarning") != "yes") {
 		document.getElementById("cookiewarning").classList.remove("hidden");
 	}
+	*/
 
 	if (getCookie("shortcutsDisabled") == "disabled") {
 		var editshortcuts = document.getElementById("toggleshortcuts");
