@@ -56,6 +56,13 @@
     padding: 1em;
     margin-bottom: 2em;
     border-radius: 0.2em;
+    transition: ease-in-out 200ms;
+}
+
+.blogentry:hover {
+    background-color: #eaeaea;
+    box-shadow: 0 0 40px #000939;
+    transition: ease-in-out 200ms;
 }
 
 img {
