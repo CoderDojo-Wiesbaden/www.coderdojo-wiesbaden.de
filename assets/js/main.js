@@ -146,6 +146,53 @@ function starmenu(element) {
 	}
 }
 
+/* Readout feature */
+function toggleAudio(file, button) {
+	var playClass = "fa-volume-up",
+		stopClass = "fa-stop";
+
+	var player = document.getElementById("audioPlayer");
+	var source = document.getElementById("audioSource");
+
+	if (player.paused) {
+		//Change source if necessary
+		if (!source.src.endsWith(file)) {
+			source.src = "audio/" + file;
+			player.load();
+		}
+		//Play and change button text
+		player.play();
+		button.classList.remove(playClass);
+		button.classList.add(stopClass);
+	} else {
+		//Pause, Reset time (start at the beginning next time) and change button text
+		player.pause();
+		player.currentTime = 0;
+		button.classList.remove(stopClass);
+		button.classList.add(playClass);
+		//If the button for another file has been triggered without pausing the last playing file,
+		//change the source, play it and change the text of all buttons (since we dont know what was playing last)
+		if (!source.src.endsWith(file)) {
+			source.src = "audio/" + file;
+			player.load();
+			player.play();
+			Array.prototype.forEach.call(document.getElementsByClassName("readoutbutton"), function (element, index, array) {
+				element.classList.remove(stopClass);
+				element.classList.add(playClass);
+			});
+			button.classList.remove(playClass);
+			button.classList.add(stopClass);
+		}
+	}
+}
+
+function setStopAudioIcon() {
+	Array.prototype.forEach.call(document.getElementsByClassName("readoutbutton"), function (element, index, array) {
+		element.classList.remove("fa-stop");
+		element.classList.add("fa-volume-up");
+	});
+}
+
 function setArticleImages() {
 	var $tiles = $('.tiles > article');
 
@@ -181,6 +228,24 @@ for (i = 0; i < coll.length; i++) {
 
 
 (function ($) {
+
+	$("#audioPlayer").on("ended", setStopAudioIcon);
+
+	/* Really inefficient for now 
+	// Include function (may replace #includeFooter)
+	[].forEach.call(document.querySelectorAll('div[data-include]'), function (div) {
+		$("div[data-include]").load("../../" + div.getAttribute('data-include')); //div.load() doesn't work
+		div.onload = function () {
+			div.removeAttribute('data-include');
+		};
+	});
+	*/
+
+	if ($("#includeFooter") != null && document.getElementById("includeFooter").innerHTML == "") {
+		$("#includeFooter").load("../../footer.html");
+	}
+
+
 	// Add smooth scrolling to all links	
 	$("a").on('click', function (event) {
 

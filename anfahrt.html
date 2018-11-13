@@ -2,17 +2,17 @@
 <html lang="de">
 
 <head>
-	<title alt="CoderDojo Wiesbaden">CoderDojo Wiesbaden</title>
+	<title>Anfahrt | CoderDojo Wiesbaden</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-	<meta name="Description" content="Im CoderDojo Wiesbaden kannst du ganz entspannt programmieren lernen. Jeden ersten Samstag im Monat.">
-	<meta name="keywords" content="Programmieren,CoderDojo,Wiesbaden,lernen,Programmierung,Coding,kostenlos,Kind,Kinder,Kids,Computer,Jugendliche">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="favicon.ico" rel="shortcut icon" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 
-<body style="background-image: url(images/banner.jpg)" class="imgbg imgoverlay imgfixed">
-	<script src="assets/js/design.js"></script>
+<body style="background-image: url(images/gross/koenidv-anfahrt.jpg)" class="imgbg imgoverlay">
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -64,8 +64,7 @@
 		<!-- Contact form -->
 		<nav id="nachricht">
 			<form action="send_form.php" method="POST">
-				<h2 class="dark">
-					<strike>Kontakt aufnehmen</strike> Vorerst deaktiviert</h2>
+					<h2 class="dark"><strike>Kontakt aufnehmen</strike> Vorerst deaktiviert</h2>
 				<div class="row">
 					<div class="6u 12u$(small)">
 						<input class="dark" type="text" name="name" placeholder="Name (Optional)" autocomplete="name">
@@ -109,6 +108,18 @@
 
 			<!-- Use -->
 			<div style="height: 2em;"></div>
+			<button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
+			<p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
+			<ul class="alt">
+				<li>
+					<code>Esc</code> Menü öffnen: Immer aktiv</li>
+				<li class="shortcutsToHide">
+					<code>Enter</code> Eine Nachricht zu schreiben</li>
+				<li class="shortcutsToHide">
+					<code>S</code> Zur Startseite navigieren</li>
+				<li class="shortcutsToHide">
+					<code>E</code> Die Einstellungen aufrufen</li>
+			</ul>
 		</nav>
 
 		<!-- Cookie warning -->
@@ -131,120 +142,87 @@
 		</div>
 
 
-		<!-- Title -->
-		<section id="banner" class="major">
-			<div class="inner">
-
-				<header class="major">
-					<h1>Willkommen beim CoderDojo Wiesbaden!</h1>
-				</header>
-
-				<div class="content">
-					<p>Du bist zwischen 8 bis 17 Jahre alt und liebst Computer?
-						<br /> Schau bei uns vorbei!</p>
-
-					<ul class="actions">
-						<li>
-							<a href="anmeldung.html" class="button next scrolly">Jetzt Anmelden!</a>
-						</li>
-					</ul>
-
-				</div>
-			</div>
-		</section>
-
 		<!-- Main -->
-		<div id="main">
+		<div id="main" class="alt">
 
-			<!-- Links -->
-			<section id="links" class="tiles">
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/benjamin-willkommen.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="willkommen.html" class="link" title="Über uns">Über uns</a>
-						</h3>
-						<p>Im Coderdojo lernst Du in entspannter Atmosphäre, wie Du einen Computer programmieren kannst. </p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="/images/koenidv-anmeldung.jpg" alt="">
-					</span>
-					<header class="major">
-						<h3>
-							<a href="anmeldung.html" class="link" title="Termine und Anmeldung">Termine und Anmeldung</a>
-						</h3>
-						<p>Das CoderDojo Wiesbaden findet jeden ersten Samstag im Monat von 12 bis 17 Uhr statt.</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-anfahrt.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="anfahrt.html" class="link" title="Anfahrt">Anfahrt</a>
-						</h3>
-						<p>Hier musst du einfach hin.</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-kontakt.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="raeumlichkeiten.html" class="link" title="Räume">R&auml;ume</a>
-						</h3>
-						<p>Du brauchst noch Unterstützung?</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-ressourcen.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="ressourcen.html" class="link" title="Ressourcen">Hilfreiche Ressourcen</a>
-						</h3>
-						<p>Klicke hier. Ein Wunder wird geschehen. Vielleicht auch nicht.</p>
-					</header>
-				</article>
-
-				<article>
-					<span class="image">
-						<img class="tileimg" src="images/koenidv-workshops.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3>
-							<a href="workshops.html" class="link" title="Workshops">Workshops und Projekte</a>
-						</h3>
-						<p>Wir haben schon einmal ein paar Ideen für dich vorbereitet.</p>
-					</header>
-				</article>
-
-			</section>
-
-			<!-- Question -->
-			<section id="frage">
+			<!-- Title -->
+			<section id="titel">
 				<div class="inner">
 					<header class="major">
-						<h2 class="dark">Was soll hier stehen?</h2>
+						<h1 class="dark">Anfahrt</h1>
+						<h2 class="dark">Komm doch vorbei!</h2>
 					</header>
-					<p class="dark">Nun, das wissen wir selbst nicht. Aber vielleicht ja du? Komm ins CoderDojo und verbessere unsere Webseite!</p>
-					<ul class="actions">
-						<li>
-							<a href="anmeldung.htmlanmeldung" class="button next dark">Los gehts!</a>
-						</li>
-					</ul>
+				</div>
+			</section>
+
+			<!-- Near help -->
+			<section id="near">
+				<div class="inner" style="padding-top: 1em; padding-bottom: 1em;">
+					<button class="collapsible" style="width: 100%">Du stehst vor der Kirche und weißt nicht weiter?</button>
+					<div class="collapsiblecontent" style="padding-top: 1em; display: none;">
+						<div class="row">
+							<div class="4u 12u$(small)">
+								<img src="https://res.cloudinary.com/koenidv/image/upload/f_auto/v1527615587/CDnearSmall.gif" style="width: 480px" />
+							</div>
+							<div class="8u 12u$(small)">
+								<p>Gehe an der Kirche vorbei, in Richtung der jeweils gegenüberliegenden Haltestelle. Auf deinem Weg wirst du einem Tor
+									(mit der Bitte, es geschlossen zu halten) begegnen. Gehe hier durch und weiter bis zum Haus mit dem überdachten
+									Eingangsbereich (das erste Haus rechts). Klingele hier.
+								</p>
+								<p>
+									Immer noch Probleme? Du kannst uns auch unter der unten angegebenen Telefonnummer erreichen, wir helfen dir dann.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Approach -->
+			<section id="anfahrt">
+				<div class="inner">
+
+					<div class="row">
+
+						<div class="6u 12u$(small)">
+							<h3 class="dark">Karte</h3>
+							<iframe src="https://www.google.com/maps/d/embed?mid=18AwbL_kIwCXFJSe9Ns4KRLM1-3Cv7aQk" width="100%" height="480"></iframe>
+						</div>
+
+						<div class="6u$ 12u$(small)">
+							<h3 class="dark">Route</h3>
+
+							<p class="dark">Das CoderDojo findet in den Jugendräumen der Bonifatiuskirche, welche direkt zwischen den Bushaltestellen
+								<a href="https://www.rmv.de/auskunft/bin/jp/query.exe/dn?ZID=A=1@O=Wiesbaden%20Luisenplatz@X=8239297" target="_blank">Luisenplatz</a>
+								und
+								<a href="https://www.rmv.de/auskunft/bin/jp/query.exe/dn?ZID=A=1@O=Wiesbaden%20Kirchgasse@X=8239171" target="_blank">Kirchgasse</a> gelegen ist, statt.
+							</p>
+
+							<a href="https://www.rmv.de/auskunft/bin/jp/query.exe/dn?ZID=A=4@O=Wiesbaden Sankt Bonifatius@X=8239701" target="_blank"
+							 class="button special fit dark">ÖPNV-Verbindung finden</a>
+							<a href="https://www.google.de/maps/dir//Luisenstraße+31a,+65185+Wiesbaden" target="_blank" class="button fit dark">Route berechnen</a>
+						</div>
+
+						<div class="12u$ 12u$(wide)">
+							<!-- Invisible to create a space -->
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+							<!-- Visible to create a line-->
+							<img class="separator" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+							 height="2px" width="100%">
+							<!-- Invisible to create a space -->
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+							 height="4px">
+						</div>
+
+						<div class="6u 12u$(small) ">
+							<a href="anmeldung.html" class="button special fit dark">Jetzt anmelden</a>
+						</div>
+
+						<div class="6u$ 12u$(small) ">
+							<a href="#kontakt" class="button fit dark" onclick="highlightContact()">Kontakt aufnehmen</a>
+						</div>
+
+					</div>
 				</div>
 			</section>
 
@@ -252,21 +230,18 @@
 
 		</div>
 	</div>
-	
+
 	<!-- Scripts -->
+	<script src="assets/js/design.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/autosize.min.js"></script>
 	<script src="assets/js/Sortable.min.js"></script>
-
-	<script>
-
-	</script>
-
 
 </body>
 

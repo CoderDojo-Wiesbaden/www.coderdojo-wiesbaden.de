@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+	<title>&Uuml;ber uns | CoderDojo Wiesbaden</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="favicon.ico" rel="shortcut icon" />
+</head>
+
+<body style="background-image: url(images/benjamin-willkommen.jpg)" class="imgbg imgoverlay">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<a href="index.html" class="logo">
+				<strong id="headcoderdojo">CoderDojo Wiesbaden</strong>
+				<span id="headboni">St. Bonifatius Wiesbaden</span>
+			</a>
+			<nav>
+				<a href="#menu" class="dark" id="menuicon">Javascript ist deaktiviert</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links" id="menu-list">
+				<li id="nav-home">
+					<a id="nav-home-link" href="index.html" class="special fit dark">Start</a>
+				</li>
+				<li id="nav-about">
+					<a id="nav-about-link" href="willkommen.html" class="special fit dark">Über Uns</a>
+				</li>
+				<li id="nav-signup">
+					<a id="nav-signup-link" href="anmeldung.html" class="special fit dark">Termine &amp; Anmeldung</a>
+				</li>
+				<li id="nav-approach" class="hidden">
+					<a id="nav-approach-link" href="anfahrt.html" class="special fit dark">Anfahrt</a>
+				</li>
+				<li id="nav-rooms" class="hidden">
+					<a id="nav-rooms-link" href="raeumlichkeiten.html" class="special fit dark">R&auml;ume</a>
+				</li>
+				<li id="nav-resources" class="hidden">
+					<a id="nav-resources-link" href="ressourcen.html" class="special fit dark">Ressourcen</a>
+				</li>
+				<li id="nav-workshops" class="hidden">
+					<a id="nav-workshops-link" href="workshops.html" class="special fit dark">Workshops</a>
+				</li>
+				<li id="nav-signupdirect">
+					<a id="nav-signupdirect-link" href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius" class="button special fit dark">Jetzt Anmelden!</a>
+				</li>
+				<li id="nav-blog">
+					<a id="nav-blog-link" href="https://blog.cdwi.de" class="special fit dark">Blog</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Contact form -->
+		<nav id="nachricht">
+			<form action="send_form.php" method="POST">
+				<h2 class="dark">
+					<strike>Kontakt aufnehmen</strike> Vorerst deaktiviert</h2>
+				<div class="row">
+					<div class="6u 12u$(small)">
+						<input class="dark" type="text" name="name" placeholder="Name (Optional)" autocomplete="name">
+						<br/>
+					</div>
+					<div class="6u$ 12u$(small)">
+						<input class="dark" type="email" name="email" placeholder="E-Mail (Optional)" autocomplete="email">
+						<br/>
+					</div>
+				</div>
+				<textarea class="dark" type="text" name="message" placeholder="Deine Nachricht" spellcheck="true" required="required" pattern="[A-Za-z0-9]{1,20}"
+				 rows="3"></textarea>
+				<br/>
+
+				<input type="hidden" name="_subject" value="CDWi: Neue Nachricht [Ressourcen]">
+				<input type="hidden" name="_cc" value="koenidv@gmail.com">
+				<input type="hidden" name="_language" value="de">
+				<input type="text" name="_gotcha" style="display:none" />
+
+				<input type="submit" value="Senden" class="button fit dark">
+			</form>
+		</nav>
+
+		<!-- Edit menu -->
+		<nav id="editmenu">
+			<!-- Privacy -->
+			<h2>Deine Daten</h2>
+			<button id="editcookies" onclick="toggleCookies()" class="button special fit">Cookies: An</button>
+			<p>Cookies erlauben uns, deine Einstellungen - zum Beispiel für das personalisierte Menü - zu speichern. Du kannst sie deaktivieren,
+				dann kannst du aber Funktionen, die diese benötigen, nicht mehr nutzen.
+				<a style="font-size: 0.8em" href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Was sind Cookies?</a>
+			</p>
+
+			<!-- Menu editing-->
+			<div style="height: 2em;"></div>
+			<h2>Menü</h2>
+			<ul id="editmenu-list" class="alt">
+				<p>Bitte warte einen Moment...</p>
+				<!-- Menu editing content is added via JavaScript -->
+			</ul>
+
+			<!-- Use -->
+			<div style="height: 2em;"></div>
+			<h2>Bedienung</h2>
+			<button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
+			<p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
+			<ul class="alt">
+				<li>
+					<code>Esc</code> Menü öffnen: Immer aktiv</li>
+				<li class="shortcutsToHide">
+					<code>Enter</code> Eine Nachricht zu schreiben</li>
+				<li class="shortcutsToHide">
+					<code>S</code> Zur Startseite navigieren</li>
+				<li class="shortcutsToHide">
+					<code>E</code> Die Einstellungen aufrufen</li>
+			</ul>
+		</nav>
+
+		<!-- Cookie warning -->
+		<div style="position: fixed; height: 100vh; z-index: 100;">
+			<div id="cookiewarning" class="hidden">
+				<a class="closeicon" onclick="hideCookieWarning()">Schließen</a>
+				<div class="row">
+					<div class="11u 12u$(small)">
+						<h2>Heyho! Wir verwenden
+							<a href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Cookies</a>, um deine
+							<a onclick="showeditmenu()">Einstellungen</a> zu speichern.
+							<a style="font-size: 0.6em; border-bottom: dotted 1px" onclick="disableCookies()">Ausschalten.</a>
+						</h2>
+					</div>
+					<div class="1u 12u">
+						<button class="button special" onclick="seenCookieWarning()">Okay</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- Title -->
+			<section id="titel">
+				<div class="inner">
+					<header class="major">
+						<h1 class="dark">&Uuml;ber das CoderDojo</h1>
+						<h2 class="dark">Wiesbaden bei St. Bonifatius</h2>
+					</header>
+				</div>
+			</section>
+
+			<!-- Information -->
+			<section id="information">
+				<div class="inner">
+					<div class="row">
+						<div class="6u 12u$(small)">
+							<h3 class="dark">Du möchtest Programmieren lernen?</h3>
+							<p class="dark">Im CoderDojo lernst du in entspannter Atmosphäre, wie du einen Computer programmieren kannst. Unser Angebot im CoderDojo
+								Wiesbaden richtet sich an Kinder und Jugendliche im Alter von 8 bis 17 Jahren. Du kannst bei uns mit HTML und CSS
+								Webseiten wie diese und mit Java Minecraft-Plugins oder
+								<a href="android.html">Android-Apps</a> programmieren, mit Arduinos und
+								<a href="esp.html">ESPs</a> das Feld der Robotik und des Internets der Dinge erkunden, per 3D-Druck deine Ideen in deine eigenen Hände
+								bringen und vieles mehr.</p>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<h3 class="dark">Was ist ein CoderDojo?</h3>
+							<p class="dark">CoderDojos sind ein Netzwerk von freien Programmierclubs für Kinder und Jugendliche. Diese unabhängigen Clubs werden
+								von Freiwilligen getragen. Zusammenarbeit und Spaß fördern hier die Entwicklung von Fähigkeiten, die oft nicht in
+								den Schulen vermittelt werden. CoderDojos sind frei und offen für Jeden. </p>
+							<a class="button fit dark" href="https://www.youtube.com/watch?v=7o61bTDK0JM">zdf-info: Kinder und Programmieren</a>
+						</div>
+						<div class="12u$ 12u$(wide)">
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+						</div>
+						<div class="6u 12u$(small)">
+							<h3 class="dark">Über das CoderDojo Wiesbaden</h3>
+							<p class="dark">Das CoderDojo Wiesbaden findet
+								<a href="raeumlichkeiten.html">in den Jugendräumen</a> der katholischen Kirchengemeinde St. Bonifatius statt. Aus dem caritativen Auftrag heraus,
+								Kindern etwas Gutes für ihr Leben mitzugeben, unterstützt die Gemeinde das Projekt unter anderem mit Räumen.
+								<br/>
+								<b class="dark">Religiöse Zugehörigkeit und Glauben sind aber keine Kriterien für die Teilnahme.</b>
+								Das Dojo steht Kindern und Jugendlichen jeder Konfession offen. Jungen und Mädchen werden gleichermaßen gefördert.
+								<br/> CoderDojos sind eine offene Veranstaltung, bei der Eltern zur Mitarbeit ermutigt werden.
+								<b class="dark">Bei jüngeren Kindern unter 12 Jahren muss ein Erziehungsberechtigter anwesend sein.</b>
+								<br/> Die Teilnahme ist kostenlos, wir bitten aber die Eltern sich an der Durchführung, z.B. durch Übernahme des Caterings,
+								zu beteiligen.</p>
+							<a class="button fit scrolly dark" href="https://www.ffh.de/on-air/sendungen/kreuz-quer/detail/toController/Topic/toAction/show/toTopic/kreuz-quer-programmieren-im-coderdojo.html"
+							 target="_blank">Beitrag des Radiosenders FFH</a>
+							<center>
+								<p style="font-size: 0.75em" class="subdark">Alternativ:
+									<a href="https://drive.google.com/open?id=15oxFTQ4clD2MGywXb3tQq9Ux9g6pu2JO" target="_blank">Audiodatei</a>
+								</p>
+							</center>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<h3 class="dark">Wie nehme ich teil?</h3>
+							<p class="dark">Wir können nur eine begrenzte Anzahl an Plätzen anbieten, daher musst du dich vor jedem Termin
+								<a href="anmeldung.html">anmelden</a>. Außerdem müssen deine Eltern das
+								<a href="vertrag.pdf" , target="_blank">Formular</a> ausfüllen, das du bei Beginn des Dojos abgibst.
+								<br/> Du benötigst einen Laptop mit Windows, Linux oder macOS, damit du auch zu Hause an deinen Projekten weiterarbeiten
+								kannst.
+								<br/> Möglicherweise musst du im CoderDojo Anwendungen installieren. Bitte stelle sicher, dass du dafür die nötigen Rechte
+								im Betriebssystem hast.</p>
+							<a href="anmeldung.html" class="button special fit dark">Termine &amp; Anmeldung</a>
+						</div>
+					</div>
+			</section>
+
+			<audio id="audioPlayer" preload="none">
+				<source id="audioSource" src="audio/willkommen-1.mp3" type="audio/mp3"> Your browser does not support the audio element.
+			</audio>
+
+			<div id="includeFooter"></div>
+
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/design.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/autosize.min.js"></script>
+		<script src="assets/js/Sortable.min.js"></script>
+</body>
+
+</html>
