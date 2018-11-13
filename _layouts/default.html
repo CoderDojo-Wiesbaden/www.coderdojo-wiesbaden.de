@@ -1,0 +1,38 @@
+---
+layout: compress
+---
+
+<!DOCTYPE HTML>
+<html lang="de">
+
+{% include head.html %}
+
+<body style="background-image: url(images/banner.jpg)" class="imgbg imgoverlay imgfixed">
+    <script src="assets/js/design.js"></script>
+
+    <div id="wrapper">
+
+        {% include navbar.html %}
+
+        {% include topbody.html %}
+
+        {{ content }}
+
+        {% include footer.html %}
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/autosize.min.js"></script>
+    <script src="assets/js/Sortable.min.js"></script>
+
+
+</body>
+
+</html>

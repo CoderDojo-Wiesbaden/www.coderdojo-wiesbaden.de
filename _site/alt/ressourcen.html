@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <title>Ressourcen | CoderDojo Wiesbaden</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="favicon.ico" rel="shortcut icon" />
+</head>
+
+<body style="background-image: url(images/gross/koenidv-ressourcen.jpg)" class="imgbg imgoverlay">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <a href="index.html" class="logo">
+                <strong id="headcoderdojo">CoderDojo Wiesbaden</strong>
+                <span id="headboni">St. Bonifatius Wiesbaden</span>
+            </a>
+            <nav>
+                <a href="#menu" class="dark" id="menuicon">Javascript ist deaktiviert</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links" id="menu-list">
+                <li id="nav-home">
+                    <a id="nav-home-link" href="index.html" class="special fit dark">Start</a>
+                </li>
+                <li id="nav-about">
+                    <a id="nav-about-link" href="willkommen.html" class="special fit dark">Über Uns</a>
+                </li>
+                <li id="nav-signup">
+                    <a id="nav-signup-link" href="anmeldung.html" class="special fit dark">Termine &amp; Anmeldung</a>
+                </li>
+                <li id="nav-approach" class="hidden">
+                    <a id="nav-approach-link" href="anfahrt.html" class="special fit dark">Anfahrt</a>
+                </li>
+                <li id="nav-rooms" class="hidden">
+                    <a id="nav-rooms-link" href="raeumlichkeiten.html" class="special fit dark">R&auml;ume</a>
+                </li>
+                <li id="nav-resources" class="hidden">
+                    <a id="nav-resources-link" href="ressourcen.html" class="special fit dark">Ressourcen</a>
+                </li>
+                <li id="nav-workshops" class="hidden">
+                    <a id="nav-workshops-link" href="workshops.html" class="special fit dark">Workshops</a>
+                </li>
+                <li id="nav-signupdirect">
+                    <a id="nav-signupdirect-link" href="" class="button special fit dark">Jetzt Anmelden!</a>
+                </li>
+				<li id="nav-blog">
+					<a id="nav-blog-link" href="https://blog.cdwi.de" class="special fit dark">Blog</a>
+				</li>
+            </ul>
+        </nav>
+
+        <!-- Contact form -->
+        <nav id="nachricht">
+            <form action="send_form.php" method="POST">
+                <h2 class="dark">
+                    <strike>Kontakt aufnehmen</strike> Vorerst deaktiviert</h2>
+                <div class="row">
+                    <div class="6u 12u$(small)">
+                        <input class="dark" type="text" name="name" placeholder="Name (Optional)" autocomplete="name">
+                        <br/>
+                    </div>
+                    <div class="6u$ 12u$(small)">
+                        <input class="dark" type="email" name="email" placeholder="E-Mail (Optional)" autocomplete="email">
+                        <br/>
+                    </div>
+                </div>
+                <textarea class="dark" type="text" name="message" placeholder="Deine Nachricht" spellcheck="true" required="required" pattern="[A-Za-z0-9]{1,20}"
+                    rows="3"></textarea>
+                <br/>
+
+                <input type="hidden" name="_subject" value="CDWi: Neue Nachricht [Ressourcen]">
+                <input type="hidden" name="_cc" value="koenidv@gmail.com">
+                <input type="hidden" name="_language" value="de">
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <input type="submit" value="Senden" class="button fit dark">
+            </form>
+        </nav>
+
+        <!-- Edit menu -->
+        <nav id="editmenu">
+            <!-- Privacy -->
+            <h2>Deine Daten</h2>
+            <button id="editcookies" onclick="toggleCookies()" class="button special fit">Cookies: An</button>
+            <p>Cookies erlauben uns, deine Einstellungen - zum Beispiel für das personalisierte Menü - zu speichern. Du kannst
+                sie deaktivieren, dann kannst du aber Funktionen, die diese benötigen, nicht mehr nutzen.
+                <a style="font-size: 0.8em" href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Was sind Cookies?</a>
+            </p>
+
+            <!-- Menu editing-->
+            <div style="height: 2em;"></div>
+            <h2>Menü</h2>
+            <ul id="editmenu-list" class="alt">
+                <p>Bitte warte einen Moment...</p>
+                <!-- Menu editing content is added via JavaScript -->
+            </ul>
+
+            <!-- Use -->
+            <div style="height: 2em;"></div>
+            <h2>Bedienung</h2>
+            <button id="toggleshortcuts" onclick="toggleShortcuts()" class="button special fit">Tastenkombinationen: An</button>
+            <p style="margin-bottom: 1em;">Wenn du die Tastenkombinationen aktiviert hast, kannst du bestimmte Tasten drücken, um Aktionen auszuf&uuml;hren:</p>
+            <ul class="alt">
+                <li>
+                    <code>Esc</code> Menü öffnen: Immer aktiv</li>
+                <li class="shortcutsToHide">
+                    <code>Enter</code> Eine Nachricht zu schreiben</li>
+                <li class="shortcutsToHide">
+                    <code>S</code> Zur Startseite navigieren</li>
+                <li class="shortcutsToHide">
+                    <code>E</code> Die Einstellungen aufrufen</li>
+            </ul>
+        </nav>
+
+        <!-- Cookie warning -->
+        <div style="position: fixed; height: 100vh; z-index: 100;">
+            <div id="cookiewarning" class="hidden">
+                <a class="closeicon" onclick="hideCookieWarning()">Schließen</a>
+                <div class="row">
+                    <div class="11u 12u$(small)">
+                        <h2>Heyho! Wir verwenden
+                            <a href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Cookies</a>, um deine
+                            <a onclick="showeditmenu()">Einstellungen</a> zu speichern.
+                            <a style="font-size: 0.6em; border-bottom: dotted 1px" onclick="disableCookies()">Ausschalten.</a>
+                        </h2>
+                    </div>
+                    <div class="1u 12u">
+                        <button class="button special" onclick="seenCookieWarning()">Okay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Title -->
+            <section id="titel" class="major">
+                <div class="inner">
+                    <header class="major">
+                        <h1 class="dark">Hilfreiche Ressourcen</h1>
+                        <h2 class="dark">Das könnte nützlich sein.</h2>
+                    </header>
+                </div>
+            </section>
+
+            <!-- Similiar  -->
+            <div class="major">
+                <div class="inner">
+
+                    <h2 class="dark">&Auml;hnliche Angebote</h2>
+
+                    <section id="angebote" class="tiles">
+
+                        <article>
+                            <span class="image">
+                                <!-- Siehe bildlizenzen.txt -->
+                                <!-- Zu lange Ladezeit
+                                    <img src="http://www.devoxx4kids.de/wiesbaden/wp-content/uploads/sites/9/nggallery/devoxx4kids-wiesbaden-april-2017/2017-04-22_09-06-41_opening.jpg"
+                                    alt="" />-->
+                                <img src="http://www.devoxx4kids.de/wiesbaden/wp-content/uploads/sites/9/nggallery/devoxx4kids-wiesbaden-april-2017/thumbs/thumbs_2017-04-22_09-06-41_opening.jpg"
+                                    alt="" />
+                            </span>
+                            <header class="major">
+                                <h3>
+                                    <a href="http://www.devoxx4kids.de/wiesbaden/" target="_blank" class="link">Devoxx4Kids bei AOE</a>
+                                </h3>
+                                <p>Bei AOE lässt sich vor allem der Bereich der Robotik weiter erkunden.</p>
+                            </header>
+                        </article>
+
+                        <article>
+                            <span class="image">
+                                <!-- Siehe bildlizenzen.txt -->
+                                <!-- Zu lange Ladezeit
+                                    <img src="https://www.programmieren.de/wp-content/uploads/2016/09/programmieren-de-aufbau.jpg" alt="" />-->
+                                <img src="https://www.programmieren.de/wp-content/uploads/2016/09/programmieren-de-aufbau-preview.jpg" alt="" />
+                            </span>
+                            <header class="major">
+                                <h3>
+                                    <a href="https://www.programmieren.de/" targt="_blank" class="link">Programmieren.de bei //Seibert/Media</a>
+                                </h3>
+                                <p>Auch unsere Freunde bei //Seibert/Media bieten einen Programmierkurs an, mit einem etwas
+                                    anderen Konzept.</p>
+                            </header>
+                        </article>
+
+                    </section>
+                </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="major">
+                <div class="inner">
+
+                    <h2 class="dark">Lernplattformen</h2>
+
+                    <section id="plattformen" class="tiles">
+
+                        <article>
+                            <span class="image">
+                                <!-- Siehe bildlizenzen.txt -->
+                                <img src="images/screenshot-codecademy.jpg" alt="" />
+                            </span>
+                            <header class="major">
+                                <h3>
+                                    <a href="https://www.codecademy.com/" target="_blank" class="link">codecademy</a>
+                                </h3>
+                                <p>Lerne durch Programmieren im Browser, mit verschiedenen Sprachen und APIs umzugehen.</p>
+                            </header>
+                        </article>
+
+                        <article>
+                            <span class="image">
+                                <!-- Siehe bildlizenzen.txt -->
+                                <img src="images/screenshot-codewars.jpg" alt="" />
+                            </span>
+                            <header class="major">
+                                <h3>
+                                    <a href="https://codewars.com/" target="_blank" class="link">Codewars</a>
+                                </h3>
+                                <p>Programmiere direkt im Browser und vergleiche deine Lösung mit denen anderer Nutzer.</p>
+                            </header>
+                        </article>
+
+                    </section>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <section id="ressourcen" class="major">
+                <div class="inner">
+                    <div class="row">
+
+                        <div class="6u 12u$(small)">
+
+                            <h3 class="dark">
+                                <a href="android.html">Android-Workshop</a>
+                            </h3>
+
+                            <a class="button fit dark" href="https://ghostbin.com/paste/uqwbr" target="_blank">Farben</a>
+                            <a class="button fit dark" href="https://ghostbin.com/paste/v3m4b" target="_blank">Aktionen</a>
+
+                            <!-- Visible to create a line-->
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+                                height="2px" width="100%">
+                            <!-- Invisible to create a space -->
+                            <img class="separator" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+
+                            <ul class="alt" style="text-align: center;">
+                                <li class="dark">
+                                    Mein CoderDojo (Benjamin) •
+                                    <a href="https://youtu.be/TF-XV93yKsg" target="_blank">Video</a>
+                                </li>
+
+                                <li class="dark">
+                                    CoderDojoHelper 2016 (Florian) •
+                                    <a href="https://drive.google.com/open?id=1z9sshsQj2A7BTutpqvEmLsp1dfagRtvh" target="_blank">APK</a> •
+                                    <a href="https://github.com/koenidv/CoderDojoHelper-2016" target="_blank">Quellcode</a> •
+                                    <a href="https://youtu.be/n74ld8rfrpE" target="_blank">Video</a>
+                                </li>
+
+                                <li class="dark">
+                                    CDH2017 (Florian) •
+                                    <a href="https://drive.google.com/open?id=1o7ASycgFwFLbstIZfzwuMAvqHehma652" target="_blank">APK</a> •
+                                    <a href="https://github.com/koenidv/CDH2017" target="_blank">Quellcode</a> •
+                                    <a href="https://youtu.be/58jYbHWC95w" target="_blank">Video</a>
+                                </li>
+                            </ul>
+
+                            <br/>
+
+                        </div>
+
+                        <div class="6u$ 12u$(small)">
+
+                            <h3 class="dark">
+                                <a href="esp.html">ESP8266-Workshop</a>
+                            </h3>
+
+                            <a class="button special fit dark" href="http://blog.opendatalab.de/codeforbuga/2016/07/02/arduino-ide-mit-nodemcu-esp8266"
+                                target="_blank">Anleitung</a>
+
+                            <div class="row">
+                                <div class="6u 12u$(small)">
+                                    <a class="button fit dark" href="https://de.aliexpress.com/wholesale?SearchText=esp8266+nodemcu" target="_blank">Board aus China</a>
+                                </div>
+                                <div class="6u$ 12u$(small)">
+                                    <a class="button fit dark" href="https://www.amazon.de/dp/B018E741G4/" target="_blank">Board von Amazon</a>
+                                </div>
+                            </div>
+
+                            <a class="button fit dark" href="https://www.amazon.de/dp/B071LDS4T6/" target="_blank">Bodenfeuchtigkeitssensor</a>
+                            <a class="button fit dark" href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx" target="_blank">NodeMCU-Treiber</a>
+
+                            <br/>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div id="includeFooter"></div>
+
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/design.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/autosize.min.js"></script>
+    <script src="assets/js/Sortable.min.js"></script>
+
+</body>
+
+</html>
