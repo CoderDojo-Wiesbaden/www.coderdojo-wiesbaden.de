@@ -1,7 +1,5 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
-@import url("https://fonts.googleapis.com/css?family=Overpass");
-
 
 .imgbg {
     background-repeat: no-repeat;
@@ -30,12 +28,12 @@
 
 .registerbg {
     height: 18em;
-	background-color: white;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 1em;
+    background-color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em;
     margin-bottom: 1em;
     transition: ease-in-out 200ms;
     border-radius: 0.2em;
@@ -45,9 +43,9 @@
     box-shadow: 0 0 40px #000939;
     background: #eaeaea;
     background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: ease-in-out 200ms;
 }
 
@@ -75,13 +73,15 @@ img[data-src] {
 }
 
 .invert {
-	color: #404040;
+    color: #404040;
 }
+
 .button.invert,
 button.invert {
     box-shadow: inset 0 0 0 1px #808080;
     color: #404040;
 }
+
 .button.invert:hover,
 button.invert:hover {
     box-shadow: inset 0 0 0 1px #7ea8c8;
@@ -91,7 +91,6 @@ button.invert:hover {
 .btngroup :first-child {
     border-radius: 0;
 }
-
 
 .hidden {
     display: none;
@@ -161,7 +160,6 @@ div#cookiewarning {
 .closeicon:active:after {
     opacity: 1;
 }
-
 
 /* Reset */
 
@@ -1929,10 +1927,6 @@ header.major {
     margin-bottom: 2em;
 }
 
-header.major > * {
-    /*font-family: "Overpass", sans-serif;*/
-}
-
 header.major> :first-child {
     margin-bottom: 0;
     width: calc(100% + 0.5em);
@@ -2731,7 +2725,6 @@ button.next:after,
     position: absolute;
     right: 1.5em;
     top: 0;
-    vertical-align: middle;
     width: 36px;
 }
 
@@ -3285,7 +3278,6 @@ button:disabled,
     line-height: inherit;
     padding: 0 0.75em;
     position: relative;
-    vertical-align: middle;
 }
 
 #header nav a:last-child {
@@ -3308,7 +3300,6 @@ button:disabled,
     position: absolute;
     right: 1.5em;
     top: 0;
-    vertical-align: middle;
     width: 24px;
 }
 
@@ -3666,10 +3657,6 @@ body.is-loading #banner>.inner {
 
 /* Main */
 
-#main {
-    /*background-color: #2a2f4a;*/
-}
-
 #main>* {
     border-top: solid 1px rgba(212, 212, 255, 0.1);
 }
@@ -3956,7 +3943,6 @@ body.is-loading #banner>.inner {
     text-align: right;
     text-indent: 8em;
     top: 0;
-    vertical-align: middle;
     white-space: nowrap;
     width: 8em;
 }
@@ -4010,7 +3996,6 @@ body.is-loading #banner>.inner {
     text-align: right;
     text-indent: 8em;
     top: 3.5em;
-    vertical-align: middle;
     white-space: nowrap;
     width: 8em;
 }
@@ -4157,7 +4142,6 @@ body.is-menu-visible #menu .inner {
     text-align: right;
     text-indent: 8em;
     top: 0;
-    vertical-align: middle;
     white-space: nowrap;
     width: 8em;
 }
@@ -4304,7 +4288,6 @@ body.is-nachricht-visible #nachricht .inner {
     text-align: right;
     text-indent: 8em;
     top: 0;
-    vertical-align: middle;
     white-space: nowrap;
     width: 8em;
 }
@@ -4358,7 +4341,6 @@ body.is-nachricht-visible #nachricht .inner {
     text-align: right;
     text-indent: 8em;
     top: 3.5em;
-    vertical-align: middle;
     white-space: nowrap;
     width: 8em;
 }
@@ -4423,24 +4405,27 @@ body.is-editmenu-visible #editmenu .inner {
     visibility: visible;
 }
 
-
 /* White theme */
 
 .whitetheme {
     color: #404040;
 }
+
 .sub.whitetheme {
-        color: #808080;
+    color: #808080;
 }
+
 .button.whitetheme,
 .button.whitetheme {
     box-shadow: inset 0 0 0 2px #808080;
 }
+
 .button.whitetheme:hover,
 .button.whitetheme:hover {
     box-shadow: inset 0 0 0 2px #7ea8c8;
     color: #7ea8c8;
 }
+
 .imgoverlaylight:before {
     background-color: rgba(255, 255, 255, 0.92);
     position: fixed;
@@ -4448,6 +4433,7 @@ body.is-editmenu-visible #editmenu .inner {
     height: 100%;
     width: 100%;
 }
+
 .whitenav:before {
     background-color: rgba(255, 255, 255, 0.6);
     position: fixed;
@@ -4455,14 +4441,17 @@ body.is-editmenu-visible #editmenu .inner {
     height: 100%;
     width: 100%;
 }
+
 .blogentry.whitetheme {
     box-shadow: 0 0 20px rgba(64, 64, 64, 0.4);
 }
+
 .button.special.whitetheme,
 button.special.whitetheme {
     box-shadow: 0 0 20px rgba(64, 64, 64, 0.2);
     transition: 300ms;
 }
+
 .button.special.whitetheme:hover,
 button.special.whitetheme:hover {
     background-color: #fafafa;
