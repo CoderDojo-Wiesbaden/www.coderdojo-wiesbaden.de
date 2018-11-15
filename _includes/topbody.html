@@ -1,26 +1,11 @@
 <!-- Menu -->
-<nav id="menu">
+<!--<nav id="menu">
     <ul class="links" id="menu-list">
-        <li id="nav-home">
-            <a id="nav-home-link" href="index.html" class="special fit dark">Start</a>
-        </li>
         <li id="nav-about">
             <a id="nav-about-link" href="willkommen.html" class="special fit dark">Über Uns</a>
         </li>
         <li id="nav-signup">
             <a id="nav-signup-link" href="anmeldung.html" class="special fit dark">Termine &amp; Anmeldung</a>
-        </li>
-        <li id="nav-approach" class="hidden">
-            <a id="nav-approach-link" href="anfahrt.html" class="special fit dark">Anfahrt</a>
-        </li>
-        <li id="nav-rooms" class="hidden">
-            <a id="nav-rooms-link" href="raeumlichkeiten.html" class="special fit dark">R&auml;ume</a>
-        </li>
-        <li id="nav-resources" class="hidden">
-            <a id="nav-resources-link" href="ressourcen.html" class="special fit dark">Ressourcen</a>
-        </li>
-        <li id="nav-workshops" class="hidden">
-            <a id="nav-workshops-link" href="workshops.html" class="special fit dark">Workshops</a>
         </li>
         <li id="nav-signupdirect">
             <a id="nav-signupdirect-link" href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius"
@@ -30,6 +15,31 @@
             <a id="nav-blog-link" href="https://blog.cdwi.de" class="special fit dark">Blog</a>
         </li>
     </ul>
+</nav>-->
+
+<nav id="menu">
+    <div class="menu-grid-about menu-grid">
+
+    </div>
+    <div class="menu-grid-blog menu-grid">
+        <h2>Einfach ein Test</h2>
+    </div>
+    <div class="menu-grid-signup menu-grid">
+        <a href="/anmelden">
+            <div class="menu-grid-signup-half">
+                <h2>
+                    Termine <small>&</small> Anmeldung
+                </h2>
+            </div>
+        </a>
+        <a href="https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius">
+            <div class="menu-grid-signup-half">
+                <h2>
+                    direkt anmelden
+                </h2>
+            </div>
+        </a>
+    </div>
 </nav>
 
 <!-- Contact form -->
@@ -59,47 +69,3 @@
         <input type="submit" value="Senden" class="button fit dark">
     </form>
 </nav>
-
-<!-- Edit menu -->
-<nav id="editmenu">
-    <!-- Privacy -->
-    <h2>Deine Daten</h2>
-    <button id="editcookies" onclick="toggleCookies()" class="button special fit">Cookies: An</button>
-    <p>Cookies erlauben uns, deine Einstellungen - zum Beispiel für das personalisierte Menü - zu speichern. Du
-        kannst sie deaktivieren,
-        dann kannst du aber Funktionen, die diese benötigen, nicht mehr nutzen.
-        <a style="font-size: 0.8em" href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Was
-            sind Cookies?</a>
-    </p>
-
-    <!-- Menu editing-->
-    <div style="height: 2em;"></div>
-    <h2>Menü</h2>
-    <ul id="editmenu-list" class="alt">
-        <p>Bitte warte einen Moment...</p>
-        <!-- Menu editing content is added via JavaScript -->
-    </ul>
-
-    <!-- Use -->
-    <div style="height: 2em;"></div>
-</nav>
-
-<!-- Cookie warning -->
-<div style="position: fixed; height: 100vh; z-index: 100;">
-    <div id="cookiewarning" class="hidden">
-        <a class="closeicon" onclick="hideCookieWarning()">Schließen</a>
-        <div class="row">
-            <div class="11u 12u$(small)">
-                <h2>Heyho! Wir verwenden
-                    <a href="http://www.meine-cookies.org/alles_ueber_cookies/warum_cookies.html">Cookies</a>,
-                    um deine
-                    <a onclick="showeditmenu()">Einstellungen</a> zu speichern.
-                    <a style="font-size: 0.6em; border-bottom: dotted 1px" onclick="disableCookies()">Ausschalten.</a>
-                </h2>
-            </div>
-            <div class="1u 12u">
-                <button class="button special" onclick="seenCookieWarning()">Okay</button>
-            </div>
-        </div>
-    </div>
-</div>
