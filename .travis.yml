@@ -1,7 +1,10 @@
+branches:
+  only:
+  - master
 language: node_js
 node_js:
 - node
 before_install:
-- npm install -g firebase-tools@3.19.3
+- npm install -g firebase-tools
 script:
 - firebase deploy --token "$FB_TOKEN"
