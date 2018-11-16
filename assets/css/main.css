@@ -286,10 +286,10 @@ div#cookiewarning {
 
 .noborder {
     border-top: unset !important;
-    border-bottom: unset !important;    
+    border-bottom: unset !important;
 }
 
-.grid > a {
+.grid>a {
     border-bottom: none;
 }
 
@@ -312,7 +312,7 @@ div#cookiewarning {
     transform: scale(0.99);
 }
 
-.tile-box > div {
+.tile-box>div {
     width: 100%;
     margin: 0 8em;
 }
@@ -346,13 +346,12 @@ div#cookiewarning {
     background-color: #ea46a6;
 }
 
-
 .route-tile {
     background-image: url(/images/koenidv-anfahrt.jpg);
 }
 
 .route-tile:hover {
-    background-color: #e77615;    
+    background-color: #e77615;
 }
 
 .rooms-tile {
@@ -382,7 +381,7 @@ div#cookiewarning {
 @media (min-width: 64em) {
     .grid {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: calc(calc(100% - 1em) / 2) calc(calc(100% - 1em) / 2);
         grid-gap: 1em;
     }
     .grid.nogap {
@@ -391,16 +390,16 @@ div#cookiewarning {
     .tile-box {
         margin: 0;
     }
-    .tile-box :nth-child(odd) {
+    .grid>:nth-child(odd)>.tile-box {
         border-radius: 0 1em 1em 0;
     }
-    .tile-box :nth-child(even) {
+    .grid>a:nth-child(even)>.tile-box {
         border-radius: 1em 0 0 1em;
     }
-    .tile-box :nth-child(odd):hover {
+    .grid>:nth-child(odd)>.tile-box:hover {
         border-radius: 1em;
     }
-    .tile-box :nth-child(even):hover {
+    .grid>a:nth-child(even)>.tile-box:hover {
         border-radius: 1em;
     }
     .contact-grid {
@@ -422,6 +421,8 @@ div#cookiewarning {
 
 body {
     -ms-overflow-style: scrollbar;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 480px) {
@@ -2240,7 +2241,7 @@ body.is-loading #header.alt {
     -ms-pointer-events: none;
     pointer-events: none;
     /*background-color: #242943;*/
-    background: linear-gradient(#242943 20%,rgba(0, 0, 0, 0));
+    background: linear-gradient(#242943 20%, rgba(0, 0, 0, 0));
     content: '';
     display: block;
     height: 100%;

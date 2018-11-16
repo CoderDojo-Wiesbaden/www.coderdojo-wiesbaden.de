@@ -7,7 +7,7 @@ layout: compress
 
 {% include head.html %}
 
-<body style="background-image: url({{ page.background }})" class="imgbg imgoverlay imgfixed">
+<body style="background-image: url({{ page.urlprefix }}{{ page.background }})" class="imgbg imgoverlay imgfixed">
 
     <div id="wrapper">
 
@@ -25,7 +25,7 @@ layout: compress
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/script.js"></script>
+    <script src="{{ page.urlprefix }}/assets/js/script.js"></script>
 
 </body>
 
