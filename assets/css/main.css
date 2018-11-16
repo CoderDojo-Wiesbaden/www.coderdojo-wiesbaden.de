@@ -286,6 +286,7 @@ div#cookiewarning {
 
 .noborder {
     border-top: unset !important;
+    border-bottom: unset !important;    
 }
 
 .grid > a {
@@ -302,6 +303,7 @@ div#cookiewarning {
     background-blend-mode: luminosity;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     transition: 250ms;
 }
 
@@ -310,12 +312,21 @@ div#cookiewarning {
     transform: scale(0.99);
 }
 
+.tile-box > div {
+    width: 100%;
+    margin: 0 8em;
+}
+
 .tile-box h2,
 .tile-box p {
     width: 100%;
     text-align: center;
     mix-blend-mode: difference;
     text-shadow: 0 0 5px gray;
+}
+
+.tile-box p {
+    font-weight: 600;
 }
 
 .about-tile {
@@ -395,6 +406,11 @@ div#cookiewarning {
     .contact-grid {
         display: grid;
         grid-template-columns: 34% 33% 33%;
+    }
+    .signup-grid {
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        grid-gap: 1em;
     }
 }
 
