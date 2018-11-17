@@ -1,8 +1,13 @@
 {
   "hosting": {
-    "public": "/",
+    "public": "_site",
     "cleanUrls": true,
     "trailingSlash": false,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "headers": [
       {
         "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
