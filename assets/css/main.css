@@ -1482,8 +1482,8 @@ section {
 }
 
 @media screen and (max-width: 736px) {
-    #main>*>.inner {
-        padding: 3em 0 1em 0;
+    .inner {
+        padding: 0 0 1em 0;
         width: calc(100% - 3em);
     }
     .inner .inner {
