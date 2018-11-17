@@ -315,7 +315,7 @@ img[data-src] {
 
 .tile-box>div {
     width: 100%;
-    margin: 0 8em;
+    margin: 0 1em;
 }
 
 .tile-box h2,
@@ -390,6 +390,9 @@ img[data-src] {
     }
     .tile-box {
         margin: 0;
+    }
+    .tile-box>div {
+        margin: 0 8em;
     }
     .grid-element {
         margin: 0;
