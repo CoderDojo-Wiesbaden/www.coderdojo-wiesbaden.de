@@ -37,11 +37,11 @@
         ]
       },
       {
-        "source": "**/*.min.js",
+        "source": "**/*.@(min.js|min.css|jpg)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=2628000"
+            "value": "max-age=7848000"
           }
         ]
       }
