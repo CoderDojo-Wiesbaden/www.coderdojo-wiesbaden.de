@@ -1,4 +1,4 @@
-
+_site/
+.sass-cache/
 .firebaserc
 firebase-debug.log
-.firebaserc

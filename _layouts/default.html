@@ -1,0 +1,32 @@
+---
+layout: compress
+---
+
+<!DOCTYPE HTML>
+<html lang="de">
+
+{% include head.html %}
+
+<body style="background-image: url({{ page.urlprefix }}{{ page.background }})" class="imgbg imgoverlay imgfixed">
+
+    <div id="wrapper">
+
+        {% include topbody.html %}
+
+        {% include navbar.html %}
+    
+        <div id="main">
+
+            {{ content }}
+
+            {% include footer.html %}
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ page.urlprefix }}/assets/js/script.js"></script>
+
+</body>
+
+</html>
