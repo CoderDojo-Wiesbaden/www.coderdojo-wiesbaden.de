@@ -59,7 +59,10 @@
 
 .menu-grid:hover {
     transform: scale(0.98);
-    transition: 200ms;
+}
+
+.menu-grid:active {
+    transform: scale(0.95);
 }
 
 .menu-grid * {
@@ -87,7 +90,8 @@
     transition: 200ms;
 }
 
-.menu-grid-about:hover {
+.menu-grid-about:hover,
+.menu-grid-blog:hover {
     background-color: lightgray;
 }
 
@@ -111,8 +115,9 @@
     transition: ease-out 200ms;
 }
 
-.menu-grid-blog:hover {
-    background-color: lightgray;
+.menu-grid-signup-half:active {
+    transform: scale(0.95);
+    border-radius: 1em;
 }
 
 @media (min-width: 64em) {
@@ -168,6 +173,10 @@
     transition: ease-in-out 200ms;
 }
 
+.registerbg * {
+    color: #404040;
+}
+
 .box {
     background-color: white;
     padding: 1em;
@@ -179,20 +188,23 @@
 .box:hover {
     background-color: #eaeaea;
     box-shadow: 0 0 40px #000939;
-    transition: ease-in-out 200ms;
+    transform: scale(0.98);
+}
+
+.box:active {
+    transform: scale(0.96);
 }
 
 .box * {
     color: #404040;
 }
 
-.box > img {
+.box>img {
     width: 100%;
     height: 8em;
     object-fit: cover;
     border-radius: 0.2em;
 }
-
 
 img {
     opacity: 1;
@@ -207,28 +219,17 @@ img[data-src] {
     height: 14em;
 }
 
-.invert {
-    color: #404040;
-}
-
-.button.invert,
-button.invert {
-    box-shadow: inset 0 0 0 1px #808080;
-    color: #404040;
-}
-
-.button.invert:hover,
-button.invert:hover {
-    box-shadow: inset 0 0 0 1px #7ea8c8;
-    color: #7ea8c8;
-}
-
 .btngroup :first-child {
     border-radius: 0;
 }
 
 .hidden {
     display: none;
+}
+
+.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .light {
@@ -261,6 +262,10 @@ button.invert:hover {
 .tile-box:hover {
     box-shadow: 0 0 1em #000939;
     transform: scale(0.99);
+}
+
+.tile-box:active {
+    transform: scale(0.97);
 }
 
 .tile-box>div {
@@ -339,6 +344,9 @@ button.invert:hover {
         grid-gap: 0;
     }
     .tile-box {
+        margin: 0;
+    }
+    .grid-element {
         margin: 0;
     }
     .grid>:nth-child(odd)>.tile-box {
@@ -1351,6 +1359,21 @@ button.fit,
     width: 100%;
 }
 
+input[type="submit"].medium,
+input[type="reset"].medium,
+input[type="button"].medium,
+button.medium,
+.button.medium {
+    display: block;
+    margin: 1em 0 1em 0;
+    width: 40%;
+}
+
+.button.dark {
+    color: #404040;
+    box-shadow: inset 0 0 0 1px #808080;
+}
+
 input[type="submit"].small,
 input[type="reset"].small,
 input[type="button"].small,
@@ -1953,6 +1976,7 @@ section {
 #main {
     padding-top: 2em;
 }
+
 #main :first-of-type(section) {
     padding: 0 0 2em 0;
 }
