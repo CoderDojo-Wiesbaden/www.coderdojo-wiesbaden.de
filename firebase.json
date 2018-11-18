@@ -8,6 +8,63 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+        {
+          "source": "/anmeldung*",
+          "destination": "/anmelden",
+          "type": 302
+        },
+        {
+          "source": "/termine*",
+          "destination": "/anmelden",
+          "type": 302
+        },
+        {
+          "source": "/t",
+          "destination": "/anmelden",
+          "type": 302
+        },
+        {
+          "source": "/a",
+          "destination": "https://zen.coderdojo.com/dojos/de/wiesbaden/wiesbaden-at-st-bonifatius",
+          "type": 301
+        },
+        {
+          "source": "/willkommen*",
+          "destination": "/wir",
+          "type": 302
+        },
+        {
+          "source": "/w",
+          "destination": "/wir",
+          "type": 301
+        },
+        {
+          "source": "/workshops",
+          "destination": "/projekte",
+          "type": 302
+        },
+        {
+          "source": "/workshops/:page*",
+          "destination": "/projekte/:page*",
+          "type": 302
+        },
+        {
+          "source": "/raeumlichkeiten*",
+          "destination": "/raeume",
+          "type": 302
+        },
+        {
+          "source": "/r",
+          "destination": "/raeume",
+          "type": 301
+        },
+        {
+          "source": "/anfahrt*",
+          "destination": "/route",
+          "type": 302
+        }
+    ],
     "headers": [
       {
         "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",

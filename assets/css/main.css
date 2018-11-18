@@ -45,7 +45,7 @@
     height: 0;
     z-index: 100;
     position: fixed;
-    top: -100%;
+    top: -500%;
     background-color: rgba(36, 41, 67, 0.96);
     opacity: 0;
     padding: 6em 2em 2em 2em;
@@ -341,8 +341,7 @@ img[data-src] {
 .tile-box p {
     width: 100%;
     text-align: center;
-    mix-blend-mode: difference;
-    text-shadow: 0 0 5px gray;
+    text-shadow: 1px 1px 5px black;
 }
 
 .tile-box p {
@@ -412,6 +411,11 @@ img[data-src] {
     }
     .tile-box>div {
         margin: 0 8em;
+    }
+    .tile-box h2,
+    .tile-box p {
+        mix-blend-mode: difference;
+        text-shadow: 0 0 5px gray;
     }
     .grid-element {
         margin: 0;
