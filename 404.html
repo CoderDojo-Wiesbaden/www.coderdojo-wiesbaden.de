@@ -8,6 +8,7 @@ title: Fehler
   .imgfixed {
     background-attachment: scroll;
   }
+
   .imgoverlay::before {
     background-color: unset;
   }
@@ -55,3 +56,11 @@ title: Fehler
 
   </div>
 </section>
+
+<script>
+  if (!document.location.href.includes("?noredir")) {
+    if (document.referrer.includes("blog.cdwi.de")) {
+      document.location.replace("https://blog.cdwi.de/?404");
+    }
+  }
+</script>
