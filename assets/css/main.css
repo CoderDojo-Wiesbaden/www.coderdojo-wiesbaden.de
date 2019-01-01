@@ -222,23 +222,46 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1em;
-    margin-bottom: 1em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
     transition: ease-in-out 200ms;
-    border-radius: 0.2em;
 }
 
-.registerbg:hover {
+.signup-grid-element:hover .registerbg {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.signup-grid-element:hover .registerbg:hover {
     box-shadow: 0 0 40px #000939;
     background: #eaeaea;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: ease-in-out 200ms;
+    transform: scale(0.99);
 }
 
 .registerbg * {
     color: #404040;
+}
+
+.register.button {
+    margin-top: 0.25em !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    transition: 200ms;
+}
+
+.signup-grid-element:hover .register.button {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.signup-grid-element:hover .register.button:hover {
+    transform: scale(0.99);
 }
 
 .box {
@@ -1056,16 +1079,18 @@ table tfoot {
     background-color: #ffffff;
     box-shadow: none;
     color: #242943;
+    transition: 200ms;
 }
 
 .button.special:hover,
 .button.special:active {
-    background-color: #9bf1ff;
+    background-color: #eaeaea;
     color: #242943 !important;
+    transform: scale(0.99);
 }
 
 .button.special:active {
-    background-color: #53e3fb;
+    transform: scale(0.97);
 }
 
 .button.disabled,
