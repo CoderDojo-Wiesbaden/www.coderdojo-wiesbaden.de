@@ -63,6 +63,36 @@
           "source": "/anfahrt*",
           "destination": "/route",
           "type": 302
+        },
+        {
+          "source": "kikr",
+          "destination": "https://coderdojo-wiesbaden.de/projekte/tischkicker",
+          "type": 301
+        },
+        {
+          "source": "b",
+          "destination": "https://blog.cdwi.de",
+          "type": 301
+        },
+        {
+          "source": "blog",
+          "destination": "https://blog.cdwi.de",
+          "type": 301
+        },
+        {
+          "source": "/b/:post*",
+          "destination": "https://blog.cdwi.de/:post",
+          "type": 301
+        },
+        {
+          "source": "/blog/:post*",
+          "destination": "https://blog.cdwi.de/:post",
+          "type": 301
+        },
+        {
+          "source": "/:post*",
+          "destination": "https://blog.cdwi.de/:post",
+          "type": 301
         }
     ],
     "headers": [
