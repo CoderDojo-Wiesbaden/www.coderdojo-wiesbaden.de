@@ -17,7 +17,7 @@ title: CoderDojo Wiesbaden
 email: mail@cdwi.de
 description: Im CoderDojo Wiesbaden kannst du ganz entspannt programmieren lernen. Jeden ersten Samstag im Monat.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cdwi.de" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: CoderDojo-Wiesbaden
 
 # Build settings

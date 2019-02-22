@@ -48,6 +48,24 @@ function getNextDojoDate() {
     }
 }
 
+window.onload = function () {
+    // For image lazy loading
+	[].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+		img.setAttribute('src', img.getAttribute('data-src'));
+		img.onload = function () {
+			img.removeAttribute('data-src');
+		};
+    });
+    [].forEach.call(document.querySelectorAll('div[data-bg]'), function (div) {
+        console.log(div)
+		div.style.backgroundImage = "url('" + div.getAttribute('data-bg') + "')";
+		div.onload = function () {
+            console.log("remove");
+			div.removeAttribute('data-bg');
+		};
+	});
+}
+
 /* Keyboard shortcuts */
 window.onkeyup = function (e) {
     var key = e.keyCode ? e.keyCode : e.which;

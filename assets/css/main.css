@@ -388,32 +388,16 @@ img[data-src] {
     background-color: #ea46a6;
 }
 
-.route-tile {
-    background-image: url(/images/koenidv-anfahrt.jpg);
-}
-
 .route-tile:hover {
     background-color: #e77615;
-}
-
-.rooms-tile {
-    background-image: url(/images/koenidv-raeume.jpg);
 }
 
 .rooms-tile:hover {
     background-color: #f4c151;
 }
 
-.resources-tile {
-    background-image: url(/images/koenidv-ressourcen.jpg);
-}
-
 .resources-tile:hover {
     background-color: #5941a9;
-}
-
-.projects-tile {
-    background-image: url(/images/koenidv-projekte.jpg);
 }
 
 .projects-tile:hover {
