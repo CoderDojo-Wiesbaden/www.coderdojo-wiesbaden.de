@@ -13,7 +13,7 @@ layout: compress
         {% include topbody.html %}
 
         {% include navbar.html %}
-    
+
         <div id="main">
 
             {{ content }}
@@ -25,6 +25,20 @@ layout: compress
 
     <!-- Scripts -->
     <script src="{{ page.urlprefix }}/assets/js/script.js"></script>
+
+    <script type="text/javascript">
+        /* First CSS File */
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = '{{ page.urlprefix }}/assets/css/reset.css';
+        css.type = 'text/css';
+        var godefer = document.getElementsByTagName('link')[0];
+        godefer.parentNode.insertBefore(css, godefer);
+    </script>
+
+    <noscript>
+        <link rel="stylesheet" href="{{ page.urlprefix }}/assets/css/reset.css" />
+    </noscript>
 
 </body>
 

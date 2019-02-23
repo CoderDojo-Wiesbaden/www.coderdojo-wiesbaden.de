@@ -60,7 +60,10 @@ title: Fehler
 <script>
   if (!document.location.href.includes("?noredir")) {
     if (document.referrer.includes("blog.cdwi.de")) {
-      document.location.replace("https://blog.cdwi.de/?404");
+      /* 404 is now on this site */
+      /*document.location.replace("https://blog.cdwi.de/?404");*/
+    } else {
+      document.location.replace("https://blog.cdwi.de/" + window.location.href.replace("https://cdwi.de/", "").replace("http://127.0.0.1:4000/", ""));
     }
   }
 </script>
