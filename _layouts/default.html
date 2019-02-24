@@ -6,7 +6,8 @@ layout: compress
 
 {% include head.html %}
 
-<body style="background-image: url({{ page.urlprefix }}{{ page.background }})" class="imgbg imgoverlay imgfixed">
+<body>
+    <div data-bg="{{ page.urlprefix }}{{ page.background }}" class="imgbg imgoverlay imgfixed">
 
     <div id="wrapper">
 
@@ -40,6 +41,7 @@ layout: compress
         <link rel="stylesheet" href="{{ page.urlprefix }}/assets/css/reset.css" />
     </noscript>
 
+    </div>
 </body>
 
 </html>
